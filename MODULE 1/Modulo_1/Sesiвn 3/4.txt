@@ -1,0 +1,23 @@
+tras ejecutar la orden:
+hulidex@GE60-2PC:~$ mpstat 5 36
+Linux 4.4.0-45-generic (GE60-2PC) 	27/10/16 	_x86_64_	(4 CPU)
+...
+01:58:31     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+Average:     all   10,46    0,00   20,45    1,90    0,00    0,04    0,00    0,00    0,00   67,15
+
+
+a) ¿Qué porcentaje de tiempo de CPU se ha usado para atender interrupciones hardware?
+	0,00%
+Orden usada: mpstat
+b) ¿Y qué porcentaje en tratar interrupciones software?
+	0,04%
+	orden usada: mpstat
+c) ¿Cuánto espacio de swap está libre y cuánto ocupado?
+	usando la orden:
+	hulidex@GE60-2PC:~/Dropbox/UGR/2º CURSO/1º Cuatrimestre/Sistemas Operativos/Prácticas/Práctica 3$ free -m
+              total        used        free      shared  buff/cache   available
+	Mem:          11936        2427        5273         679        4234        8482
+	Swap:          3905           0        3905
+
+
+	Espacio usado 0 MB, Espacio Libre 3905MB

@@ -1,0 +1,24 @@
+Construye un script que utilice la orden find para generar en la salida estándar los archivos
+modificados en las últimas 24 horas (partiendo del directorio home y recorriéndolo en
+profundidad),
+ la
+ salida
+ deberá
+ escribirse
+ el
+ archivo
+ de
+ nombre
+“modificados_<año><día><hora>” (dentro del directorio home). Con la orden at provoque que
+se ejecute dentro de un día a partir de este momento.
+
+El script que yo he creado con nombre "script3.sh" es:
+#!/bin/bash
+
+nombrefichero=modificados_`date +%Y-%d-%H`
+
+
+find ~ -mtime 0 1> ~/$nombrefichero 2> ./error
+
+Lanzamos el script dentro de un día:
+[root@localhost Anfitrion]# at -f ./script3.sh tomorrow

@@ -1,0 +1,16 @@
+Creamos las rutas donde se montarán los ficheros:
+
+[root@localhost ~]# mkdir /mnt/SA_ext3 /mnt/LABEL_ext4
+
+Montamos el dispositivo /dev/loop1 en la ruta /mnt/LABEL_ext4 con la opción de sólo lectura( -o ro)
+
+
+[root@localhost ~]# mount -t ext4 -o ro /dev/loop1 /mnt/LABEL_ext4/
+[ 4250.160000] EXT4-fs (loop1): mounted filesystem with ordered data mode. Opts: (null)
+Montamos el dispositivo /dev/loop0 en la ruta /mnt/SA_ext3 con la opción de que se sincronicen sus operaciones de E/S de modificación de ficheros  (-o sync)
+[root@localhost ~]# mount -t ext3 -o sync /dev/loop0 /mnt/SA_ext3/
+[ 4318.610000] EXT3-fs: barriers not enabled
+[ 4318.610000] kjournald starting.  Commit interval 5 seconds
+[ 4318.610000] EXT3-fs (loop0): warning: maximal mount count reached, running e2fsck is recommended
+[ 4318.610000] EXT3-fs (loop0): using internal journal
+[ 4318.610000] EXT3-fs (loop0): mounted filesystem with writeback data mode

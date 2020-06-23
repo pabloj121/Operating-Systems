@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/ -->
+<html lang="es-ES"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+<title>Comandos linux : find con ejemplos</title>
+
+<link rel="profile" href="https://gmpg.org/xfn/11">
+
+<link rel="pingback" href="https://www.comoinstalarlinux.com/xmlrpc.php">
+
+<!--[if lt IE 9]>
+	<script src="https://www.comoinstalarlinux.com/wp-content/themes/smpl-skeleton/js/html5.js"></script>
+<![endif]-->
+
+
+<!-- Mobile Specific Metas
+================================================== -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="yandex-verification" content="461a35a398e00e00">
+<meta name="alexaVerifyID" content="pc122Id7kCJHHHd9UQ7LjBNM-Fg">
+
+
+<style type="text/css" id="custom-nextpage-style">
+.page-link-box {
+	text-align: center;
+}
+.custom-page-links {
+	padding: 5px 10px;
+	display: inline-block;
+}
+.custom-page-links a {
+	text-decoration: none;
+}
+.custom-page-links a span {
+	margin-right: 10px;
+}
+.page-links {
+	margin-top: 0;
+	padding: 0;
+	list-style: none;
+}
+.page-links li {
+	margin: 0 5px;
+	display: inline-block;
+}
+
+.first a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #24a800;
+    color: white;
+}
+
+.first a:hover{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2ac400;
+}
+
+.first a:visited{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #24a800;
+}
+
+.previous a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #24a800;
+    color: white;
+}
+
+.previous a:hover{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2ac400;
+}
+
+.previous a:visited{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #24a800;
+}
+
+.next a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #24a800;
+    color: white;
+}
+
+.next a:hover{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2ac400;
+}
+
+.next a:visited{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #24a800;
+}
+
+.last a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #24a800;
+    color: white;
+}
+
+.last a:hover{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2ac400;
+}
+
+.last a:visited{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #24a800;
+}
+.numpages a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #24a800;
+    color: white;
+}
+
+.numpages a:hover{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2ac400;
+}
+
+.numpages a:visited{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #24a800;
+}
+.current {
+    background-color: #eeeeee;
+    padding: 10px;
+}
+
+.current span{
+    color: #000000;
+}
+</style>
+
+<!-- All in One SEO Pack 2.4 by Michael Torbert of Semper Fi Web Design[470,533] -->
+<link rel="author" href="https://plus.google.com/u/0/+LuisMedina75/">
+<meta name="description" content="El comando linux find es realmente útil y uno de los comandos linux que debes dominar para poder gestionar cualquier sistema linux de forma mas sencilla">
+
+<meta name="keywords" content="comandos linux,linux commands,comando linux find,find,luis armando medina,terminal">
+
+<link rel="canonical" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/">
+			<script async="" src="./Comandos linux _ find con ejemplos_files/async-ads.js"></script><script id="facebook-jssdk" src="./Comandos linux _ find con ejemplos_files/sdk.js"></script><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_rendering_170.js"></script><script src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;correlator=2807358082463393&amp;output=json_html&amp;callback=googletag.impl.pubads.callbackProxy1&amp;impl=fifs&amp;json_a=1&amp;eid=108809103%2C21060301%2C21060362%2C21060514%2C21061149&amp;sc=1&amp;sfv=1-0-14&amp;iu_parts=360613911%2CGenericDFP2017&amp;enc_prev_ius=%2F0%2F1&amp;prev_iu_szs=320x266&amp;cookie_enabled=1&amp;abxe=1&amp;lmt=1513963216&amp;dt=1513963216507&amp;frm=20&amp;biw=1351&amp;bih=653&amp;oid=3&amp;adxs=0&amp;adys=0&amp;adks=322996343&amp;gut=v2&amp;ifi=1&amp;u_tz=60&amp;u_his=4&amp;u_h=768&amp;u_w=1366&amp;u_ah=744&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=3&amp;u_sd=1&amp;flash=0&amp;url=https%3A%2F%2Fwww.comoinstalarlinux.com%2Fcomandos-linux-find-con-ejemplos%2F&amp;ref=https%3A%2F%2Fwww.google.es%2F&amp;dssz=35&amp;icsg=274813594280&amp;std=0&amp;vrg=170&amp;vis=1&amp;ga_vid=1662132250.1513963216&amp;ga_sid=1513963217&amp;ga_hid=1511936394"></script><script type="text/javascript" async="" src="./Comandos linux _ find con ejemplos_files/cse.js"></script><script type="text/javascript">
+				window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+				ga('create', 'UA-92261-10', 'auto');
+				// Plugins
+				
+				ga('send', 'pageview');
+			</script>
+			<script async="" src="./Comandos linux _ find con ejemplos_files/analytics.js"></script>
+			<!-- /all in one seo pack -->
+<link rel="dns-prefetch" href="https://platform.twitter.com/">
+<link rel="dns-prefetch" href="https://www.comoinstalarlinux.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Como Instalar Linux » Feed" href="https://www.comoinstalarlinux.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Como Instalar Linux » RSS de los comentarios" href="https://www.comoinstalarlinux.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Como Instalar Linux » Comandos linux : find con ejemplos RSS de los comentarios" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.comoinstalarlinux.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.4"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Comandos linux _ find con ejemplos_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="tfg_style-css" href="./Comandos linux _ find con ejemplos_files/tfg_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="cptch_stylesheet-css" href="./Comandos linux _ find con ejemplos_files/front_end_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="./Comandos linux _ find con ejemplos_files/dashicons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="cptch_desktop_style-css" href="./Comandos linux _ find con ejemplos_files/desktop_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="./Comandos linux _ find con ejemplos_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="smpl_shortcodes-css" href="./Comandos linux _ find con ejemplos_files/smpl-shortcodes.css" type="text/css" media="all">
+<link rel="stylesheet" id="skeleton-css" href="./Comandos linux _ find con ejemplos_files/skeleton-1140.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" id="formalize-css" href="./Comandos linux _ find con ejemplos_files/formalize.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" id="superfish-css" href="./Comandos linux _ find con ejemplos_files/superfish.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" id="skeleton-body-fonts-css" href="./Comandos linux _ find con ejemplos_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="skeleton-heading-fonts-css" href="./Comandos linux _ find con ejemplos_files/css(1)" type="text/css" media="all">
+<link rel="stylesheet" id="skeleton-style-css" href="./Comandos linux _ find con ejemplos_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="skeleton-theme-settings-css-css" href="./Comandos linux _ find con ejemplos_files/layout.css" type="text/css" media="all">
+<style id="skeleton-theme-settings-css-inline-css" type="text/css">
+
+		body {
+			color: #333333;
+			font-family: Open Sans;
+			background-color: #ffffff;
+		}
+		h1,h2,h3,h4,h5 {
+			font-family: PT Sans;
+		}
+		a,a:visited {
+			color: #177f0a;
+		}
+		a:hover, a:focus, a:active {
+			color: #24a301;
+		}
+		#header h1#site-title a {
+			color:#2ead1d;
+		}
+		h3.widget-title,
+		#header span.site-desc {
+			color:#000000;
+		}
+
+	
+</style>
+<link rel="stylesheet" id="upprev-css-css" href="./Comandos linux _ find con ejemplos_files/upprev.css" type="text/css" media="all">
+<script type="text/javascript">
+var iworks_upprev = { animation: 'flyout', position: 'right', offset_percent: 75, offset_element: '#nav-below', css_width: 360, css_side: 5, compare: 'category', url_new_window: 0, ga_track_views: 1, ga_track_clicks: 1, ga_opt_noninteraction: 1, title: 'Comandos linux : find con ejemplos' };
+</script>
+<script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/jquery.js"></script>
+<script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/smpl-shortcodes.js"></script>
+<script type="text/javascript" src="https://www.comoinstalarlinux.com/wp-content/plugins/useful-banner-manager/scripts.js?ver=4.8.4"></script>
+<script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/upprev.js"></script>
+<link rel="https://api.w.org/" href="https://www.comoinstalarlinux.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.comoinstalarlinux.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.comoinstalarlinux.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Como Instalar Ubuntu Tweak en Ubuntu 12.04, 12.10, 13.04 y 13.10" href="https://www.comoinstalarlinux.com/como-instalar-ubuntu-tweak-en-ubuntu-12-04-12-10-13-04-y-13-10/">
+<link rel="next" title="Como Instalar Copy y Tener 20 Gb de Espacio GRATIS en la Nube" href="https://www.comoinstalarlinux.com/como-instalar-copy-y-tener-20-gb-de-espacio-gratis-en-la-nube/">
+<meta name="generator" content="WordPress 4.8.4">
+<link rel="shortlink" href="https://www.comoinstalarlinux.com/?p=1408">
+<link rel="alternate" type="application/json+oembed" href="https://www.comoinstalarlinux.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.comoinstalarlinux.com%2Fcomandos-linux-find-con-ejemplos%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.comoinstalarlinux.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.comoinstalarlinux.com%2Fcomandos-linux-find-con-ejemplos%2F&amp;format=xml">
+<meta property="fb:app_id" content="447449365318316">
+
+<!-- Facebook Like Thumbnail -->
+<link rel="image_src" href="./Comandos linux _ find con ejemplos_files/terminal_icon.png">
+<!-- End Facebook Like Thumbnail -->
+
+<style type="text/css">
+#upprev_box{bottom:5px;width:360px;right:5px;display:block;right:-415px;display:block;}
+ </style>
+
+<link rel="preload" href="https://adservice.google.es/adsid/integrator.js?domain=www.comoinstalarlinux.com" as="script"><script type="text/javascript" src="https://adservice.google.es/adsid/integrator.js?domain=www.comoinstalarlinux.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.comoinstalarlinux.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.comoinstalarlinux.com"></script><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_170.js" async=""></script><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-14/html/container.html"><script src="./Comandos linux _ find con ejemplos_files/jsapi" type="text/javascript"></script><link type="text/css" href="./Comandos linux _ find con ejemplos_files/default+es.css" rel="stylesheet"><link type="text/css" href="./Comandos linux _ find con ejemplos_files/default.css" rel="stylesheet"><script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/default+es.I.js"></script><style type="text/css">
+</style><script type="text/javascript" charset="utf-8" async="" src="./Comandos linux _ find con ejemplos_files/button.e3d988d72a52909fc67d44f2acde830e.js"></script><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gscsep_a{display:none}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0 7px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{height:100%;overflow:hidden;position:fixed;width:100%}.fb_shrink_active{opacity:1;transform:scale(1, 1);transition-duration:200ms;transition-timing-function:ease-out}.fb_shrink_active:active{opacity:.5;transform:scale(.75, .75)}</style></head>
+<body class="post-template-default single single-post postid-1408 single-format-standard sidebar-right">
+
+<div id="wrap" class="container"><div id="header" class="sixteen columns">
+<div class="inner">
+<h1 id="site-title"><a class="logotype-img" href="https://www.comoinstalarlinux.com/" title="Como Instalar Linux" rel="home"><img src="./Comandos linux _ find con ejemplos_files/como-instalar-linux-logo-90-green.png" alt="Como Instalar Linux"></a></h1></div>
+</div>
+<!--/#header-->
+<div id="navigation" class="row sixteen columns"><div class="menu-header"><ul id="menu-main-top" class="menu sf-js-enabled sf-arrows"><li id="menu-item-2223" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2223"><a href="https://www.comoinstalarlinux.com/">Inicio</a></li>
+<li id="menu-item-4012" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4012"><a href="https://www.comoinstalarlinux.com/tag/instalacion/" class="sf-with-ul">Instalar LInux</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-4176" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-4176"><a href="https://www.comoinstalarlinux.com/como-instalar-linux-mint-18-2-sonya/">Como Instalar Linux Mint 18.2 Sonya</a></li>
+	<li id="menu-item-4016" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-4016"><a href="https://www.comoinstalarlinux.com/como-instalar-fedora/">Como Instalar Fedora</a></li>
+	<li id="menu-item-4086" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-4086"><a href="https://www.comoinstalarlinux.com/instalar-debian-9-stretch-en-tu-escritorio/">Instalar Debian 9 en tu Escritorio</a></li>
+	<li id="menu-item-4014" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-4014"><a href="https://www.comoinstalarlinux.com/como-instalar-ubuntu-server-16-04-lts/">Como Instalar Ubuntu Server 16.04 LTS</a></li>
+	<li id="menu-item-4013" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-4013"><a href="https://www.comoinstalarlinux.com/como-instalar-centos-linux-como-servidor/">Como Instalar Centos Como Servidor</a></li>
+	<li id="menu-item-4023" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-4023"><a href="https://www.comoinstalarlinux.com/como-instalar-debian-como-servidor/">Como Instalar Debian como Servidor</a></li>
+</ul>
+</li>
+<li id="menu-item-4004" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-4004"><a href="https://www.comoinstalarlinux.com/category/blog/" class="sf-with-ul">Blog</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-4022" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4022"><a href="https://www.comoinstalarlinux.com/category/software-libre/">Software Libre</a></li>
+	<li id="menu-item-4005" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4005"><a href="https://www.comoinstalarlinux.com/category/distribuciones-linux/dustro-arch-linux/">Arch Linux</a></li>
+	<li id="menu-item-2250" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2250"><a href="https://www.comoinstalarlinux.com/category/distribuciones-linux/centos/">Centos</a></li>
+	<li id="menu-item-2251" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2251"><a href="https://www.comoinstalarlinux.com/category/distribuciones-linux/debian/">Debian</a></li>
+	<li id="menu-item-2249" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2249"><a href="https://www.comoinstalarlinux.com/category/distribuciones-linux/linux-min/">Linux Mint</a></li>
+	<li id="menu-item-2252" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2252"><a href="https://www.comoinstalarlinux.com/category/distribuciones-linux/opensuse/">openSUSE</a></li>
+	<li id="menu-item-2248" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2248"><a href="https://www.comoinstalarlinux.com/category/distribuciones-linux/ubuntu/">Ubuntu</a></li>
+</ul>
+</li>
+<li id="menu-item-2336" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-2336"><a href="https://www.comoinstalarlinux.com/category/linux/comandos-linux/" class="sf-with-ul">Comandos Linux</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-2245" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2245"><a href="https://www.comoinstalarlinux.com/comandos-linux/">Comandos Linux por Tipos de Tareas</a></li>
+	<li id="menu-item-2246" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2246"><a href="https://www.comoinstalarlinux.com/comandos-linux/comandos-linux-de-la-a-a-la-z/">Comandos Linux de la A a la Z</a></li>
+</ul>
+</li>
+<li id="menu-item-4001" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4001"><a href="https://click.linksynergy.com/fs-bin/click?id=cuk6ZPoB*ZE&amp;subid=&amp;offerid=323058.1&amp;type=10&amp;tmpid=14538&amp;RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fcourses%2Fit-and-software%2Foperating-systems%2F">Cursos Linux</a></li>
+<li id="menu-item-2343" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2343"><a href="https://www.comoinstalarlinux.com/contacto/" class="sf-with-ul">Contacto</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-3894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3894"><a href="https://www.comoinstalarlinux.com/donaciones/">Donaciones</a></li>
+	<li id="menu-item-2243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2243"><a href="https://www.comoinstalarlinux.com/servicios/">Servicios</a></li>
+	<li id="menu-item-2188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2188"><a href="https://www.comoinstalarlinux.com/publicidad/">Publicidad</a></li>
+</ul>
+</li>
+</ul></div></div><!--/#navigation--><a id="top"></a><div id="content" class="eleven columns">
+
+
+<div id="post-1408" class="single post-1408 post type-post status-publish format-standard hentry category-comandos-linux tag-comandos-linux-2 tag-find tag-luis-armando-medina tag-terminal">
+
+	<h1 class="entry-title">Comandos linux : find con ejemplos</h1>
+	<div class="entry-meta">
+		<span class="meta-prep meta-prep-author">Publicado por</span> <span class="author vcard"><a class="url fn n" href="https://www.comoinstalarlinux.com/author/luis-armando-medina/" title="Ver todos los post de Luis Armando Medina">Luis Armando Medina</a></span>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- CIL-LNK-720 -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:15px" data-ad-client="ca-pub-4901283407969566" data-ad-slot="9913030895"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+	</div><!-- .entry-meta -->
+
+ <!-- title adsense -->
+ <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ <div id="ads_mobile"><!-- CIL adaptable banner --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4901283407969566" data-ad-slot="1385344893" data-ad-format="auto"></ins></div>
+<script type="text/javascript" charset="utf-8">
+  function isMobile(){
+      return (
+          (navigator.userAgent.match(/Android/)) ||
+          (navigator.userAgent.match(/webOS/)) ||
+          (navigator.userAgent.match(/iPhone/)) ||
+          (navigator.userAgent.match(/iPod/)) ||
+          (navigator.userAgent.match(/iPad/)) ||
+          (navigator.userAgent.match(/BlackBerry/)) ||
+          (navigator.userAgent.match(/android/)) ||
+          (navigator.userAgent.match(/webOS/)) ||
+          (navigator.userAgent.match(/iPhone/)) ||
+          (navigator.userAgent.match(/iPod/)) ||
+          (navigator.userAgent.match(/iPad/)) ||
+          (navigator.userAgent.match(/blackBerry/))
+      );
+  }
+  
+  if( isMobile() ){
+    //anuncio movil add
+    var Html = ''+
+           '<!-- CIL 320x100 -->'+
+           '<ins class="adsbygoogle"'+
+             ' style="display:inline-block;width:320px;height:100px"'+
+             'data-ad-client="ca-pub-4901283407969566"'+
+             'data-ad-slot="1843020091"></ins>';
+  } else {
+    //anuncio web add
+    var Html = ''+
+           '<!-- CIL adaptable banner -->'+
+           '<ins class="adsbygoogle"'+
+             ' style="display:block"'+
+             'data-ad-client="ca-pub-4901283407969566"'+
+             'data-ad-slot="1385344893"'+
+             'data-ad-format="auto"></ins>';
+  }
+  document.getElementById('ads_mobile').innerHTML = Html;
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+<!-- End title adsense -->
+
+	<div class="entry-content">
+		<div class="bottomcontainerBox" style="background-color:#FFFFFF;">
+<div style="float:left; width:130px;padding-right:10px; margin:4px 4px 4px 4px;height:30px;">
+			<iframe src="./Comandos linux _ find con ejemplos_files/like.html" scrolling="no" frameborder="0" allowtransparency="true" style="border:none; overflow:hidden; width:130px; height:21px;"></iframe></div>
+<div style="float:left; width:95px;padding-right:10px; margin:4px 4px 4px 4px;height:30px;">
+			<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="./Comandos linux _ find con ejemplos_files/tweet_button.eaf4b750247dd4d0c4a27df474e7e934.es.html" style="position: static; visibility: visible; width: 70px; height: 20px;" data-url="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/"></iframe>
+			</div>
+<p></p></div>
+<div style="clear:both"></div>
+<div style="padding-bottom:4px;"></div>
+<p><img class="alignleft" src="./Comandos linux _ find con ejemplos_files/terminal_icon.png" alt="comandos linux" width="307" height="307">El <strong>comando linux find</strong> es uno de los <a title="Comandos Linux de la A a la Z" href="http://www.comoinstalarlinux.com/comandos-linux/comandos-linux-de-la-a-a-la-z/" target="_blank" rel="noopener">comandos linux</a> más útiles que existen, sin embargo es también uno de los comandos que menos se conocen y que los usuarios nuevos aprecian como “muy complicado” sin embargo, una vez que sabes como funciona te das cuenta que es simple y poderoso cuando tienes 1,800,000 archivos y deseas encontrar “unos” pocos archivos que cumplen ciertos parámetros, este comando “simplifica tu vida” de forma extraordinaria y si eres un Administrador de Sistemas Linux o piensas serlo, <strong>este es un comando que debes dominar</strong> para que tu sistema linux sea más confortable.</p>
+<p>Aquí te explico como funciona el comando find y varios ejemplos prácticos para utilizarlos y aprovechar todo lo que este comando puede hacer.<span id="more-1408"></span></p>
+<h1><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><p></p>
+<div id="ads_content" style=" width:368px; height:282px; float: left; padding: 5px 15px 0 0;"><!-- CIL adaptable banner --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4901283407969566" data-ad-slot="1385344893" data-ad-format="auto"></ins></div>
+<p>El comando linux find</p></h1>
+<p>Cómo &nbsp;dice su nombre en inglés este comando sirve para buscar y encontrar archivos o directorios y puedes hacerlo en base a muchas opciones, por ejemplo: puedes buscar archivos por nombre, por nombres que coincidan con ciertas letras o frases, archivos de ciertos usuarios, creados en cierta fecha y un montón de opciones que trataré de mencionar en los siguientes ejemplos. Espero que te sean útiles.</p>
+<p><strong>Te Recomiendo:</strong><br>
+<a title="comandos linux: find con ejemplos 2" href="http://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos-2/">“Comandos Linux: find con ejemplos 2da parte”</a></p>
+<p>Lo principal que debes saber es como usar este comando y es que la sinopsis que encuentras con el comando “man find” no es muy calara pues si la vez esto es lo que te dice:</p>
+<pre>find [-H] [-L] [-P] [-D debugopts] [-Olevel] [path...] [expression]</pre>
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4901283407969566" data-ad-slot="2548998419"></ins> <script>
+ (adsbygoogle = window.adsbygoogle || []).push({}); </script></p>
+<p>He… ok. Así fue como me quedé cuando intenté usar este comando por primera vez y si te ocurre pues no te preocupes esto es lo que significa:</p>
+<pre>find donde-buscar creterio que-buscar</pre>
+<p>Teniendo esto en cuenta ahora puedes comenzar a jugar con find y seguir estos ejemplos para entender como funciona y te hagas un experto en este comando.</p>
+<div style="text-align: center;"><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:200px;height:90px" data-ad-client="ca-pub-4901283407969566" data-ad-slot="8157096097"></ins> <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<h2>Ejemplos básicos</h2>
+<h4>1. Listar todos los archivos contenidos en el directorio actual y en los sub directorios</h4>
+<pre>find</pre>
+<pre>./abc.txt
+ ./folder
+ ./folder/prueba.php
+ ./index.php</pre>
+<p>Este comando es equivalente a escribir cualquier a de los siguientes:</p>
+<pre>find .
+ find . -print</pre>
+<h4>2. Buscar archivos en una ruta específica</h4>
+<p>El siguiente comando realizará una búsqueda de archivos que se encuentren en el subdirectorio “prueba” y listará todos los archivos y directorios que de encuentren dentro del este.</p>
+<pre>find ./prueba
+ ./prueba
+ ./prueba/abc.txt
+ ./prueba/folder
+ ./prueba/folder/prueba.php
+ ./prueba/index.php</pre>
+<h4>3. Buscar un archivo por el nombre</h4>
+<p>Para buscar un archivo por su nombre puedes utilizar el parámetro -name asi:</p>
+<pre>find ./prueba -name abc.txt
+ ./prueba/abc.txt</pre>
+<p><span style="font-size: 16px; line-height: 1.714285714;">Al realizar una búsqueda con el comando find también puedes utilizar comodines por ejemplo para buscar todos los archivos con extensión php puedes usarlo asi:</span></p>
+<pre>find ./prueba -name *.php
+ ./prueba/folder/prueba.php
+ ./prueba/index.php</pre>
+<p><span style="line-height: 1.714285714;">Existe la posibilidad de que quieras encontrar todos los archivos que tengan extensión .php pero algunos están con mayúsculas, para ignorar entre mayúsculas y&nbsp;</span>minúsculas<span style="line-height: 1.714285714;">&nbsp;utiliza -iname para ignorar este criterio. </span></p>
+<div style="text-align: center;"><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:200px;height:90px" data-ad-client="ca-pub-4901283407969566" data-ad-slot="8157096097"></ins> <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<p></p>
+<pre>find ./prueba -iname *.PhP
+ ./prueba/folder/prueba.php
+ ./prueba/index.php</pre>
+<p>Recuerda que los sub directorios se analizan recursivamente por lo que puedes buscar en todo el sistema de archivos si pones la ruta como / pero debes tener en cuenta que la búsqueda se realizará en todos los directorios dentro del sistema de archivos, incluyendo los sistemas montados por red o en otros dispositivos como DVDs, CDs o USBs, y pueden causar una baja en el desempeño del equipo. Recuerda que siempre puedes cancelar una búsqueda presionando Ctrl+C</p>
+<h4>4. Invertir el criterio de búsqueda</h4>
+<p>Si lo que quieres buscar es todo lo que no cumpla con el criterio de búsqueda puedes utilizar el parámetro -not por ejemplo para buscar todos los archivos que no tienen extensión .php</p>
+<pre>find ./prueba -not -name *.php
+ ./prueba
+ ./prueba/abc.txt
+ ./prueba/folder</pre>
+<h4>5. Buscar solo archivos o solo directorios</h4>
+<p>Uno de los problemas que todo principiante en linux se encuentra es como listar “solo” los directorios o solo los archivos y para esto el comando find permite hacerlo sin problema</p>
+<pre>find ./prueba -name abc*
+ ./prueba/abc.txt
+ ./prueba/abc</pre>
+<p>para buscar solo archivos utiliza el parámetro -type f</p>
+<pre>find ./prueba -type f -name abc*
+ ./prueba/abc.txt</pre>
+<p>para buscar solo directorios utiliza el parámetro -type d</p>
+<pre>find ./prueba -type d -name abc*
+ ./prueba/abc</pre>
+<h4>6. Buscar en múltiples directorios</h4>
+<p>Es muy útil poder hacer una búsqueda en varios directorios o rutas a la vez y solo hace falta agregarlas en los parámetros.</p>
+<pre>find ./prueba ./folder2 -type f -name abc*
+ ./prueba/abc.txt
+ ./folder2/abcdef.txt</pre>
+<h4>7. Buscar archivos ocultos</h4>
+<p>Para realizar la búsqueda de archivos ocultos puedes utilizar el parámetro “.*” como sigue:</p>
+<pre>find ~ -type f -name ".*"</pre>
+<h4>Para finalizar</h4>
+<p>El comando linux find es realmente útil y un comando que debes dominar para poder gestionar cualquier sistema linux de forma mas sencilla y confortable ya que te permite encontrar archivos de una forma rápida y precisa.</p>
+<p>Comandos Linux: find (primera parte)<br>
+<a title="comandos linux: find con ejemplos 2" href="http://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos-2/" target="_blank" rel="noopener">Comandos Linux: find con ejemplos (segunda parte)</a><br>
+<a title="comandos linux: find con ejemplos 3" href="http://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos-3/">Comandos Linux: find con ejemplos (tercera parte)</a></p>
+<p>Tu Servidor y Amigo</p>
+<p><strong>Luis Armando Medina</strong><br>
+Sígueme en Twitter: <a title="sígueme en twitter" href="https://twitter.com/larmedina" target="_blank" rel="noopener">@larmedina</a></p>
+<p style="margin-bottom: 27px;"><img class="alignleft size-full wp-image-696" style="margin-left: 45px;" src="./Comandos linux _ find con ejemplos_files/facebook-arrow.png" alt="facebook-arrow" width="50" height="50"> Haz click en <strong>“Me Gusta”</strong> y deja un comentario:</p>
+
+	<div class="clear"></div>
+
+<div style=" width: 40%;  margin: 0 auto; ">
+<script async="async" src="./Comandos linux _ find con ejemplos_files/gpt.js"></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/360613911/GenericDFP2017', [320, 266], 'div-gpt-ad-1506001848458-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<!-- /360613911/GenericDFP2017 -->
+<div id="div-gpt-ad-1506001848458-0" style="height:266px; width:320px;">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1506001848458-0'); });
+</script>
+<div id="google_ads_iframe_/360613911/GenericDFP2017_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/360613911/GenericDFP2017_0" title="3rd party ad content" name="google_ads_iframe_/360613911/GenericDFP2017_0" width="320" height="266" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" src="./Comandos linux _ find con ejemplos_files/saved_resource.html"></iframe></div></div></div>
+
+	
+	</div><!-- .entry-content -->
+
+        <div id="nav-below" class="navigation"><div class="nav-prev"><a href="https://www.comoinstalarlinux.com/como-instalar-ubuntu-tweak-en-ubuntu-12-04-12-10-13-04-y-13-10/" rel="prev">Post Anterior</a></div><div class="nav-next"><a href="https://www.comoinstalarlinux.com/como-instalar-copy-y-tener-20-gb-de-espacio-gratis-en-la-nube/" rel="next">Siguiente Post</a></div></div><!-- #nav-below -->
+	<hr>
+	<div class="entry-utility">
+		This entry was posted in <a href="https://www.comoinstalarlinux.com/category/linux/comandos-linux/" rel="category tag">Comandos Linux</a> and tagged <a href="https://www.comoinstalarlinux.com/tag/comandos-linux-2/" rel="tag">comandos linux</a>, <a href="https://www.comoinstalarlinux.com/tag/find/" rel="tag">find</a>, <a href="https://www.comoinstalarlinux.com/tag/luis-armando-medina/" rel="tag">Luis Armando Medina</a>, <a href="https://www.comoinstalarlinux.com/tag/terminal/" rel="tag">Terminal</a>. Bookmark the <a href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/" title="Permalink to Comandos linux : find con ejemplos" rel="bookmark">permalink</a>.			</div><!-- .entry-utility -->
+	<div class="clear"></div>
+
+</div><!-- #post-## -->
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-4901283407969566" data-ad-slot="1035562897"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div class="clear"></div>
+
+<a href="https://click.linksynergy.com/fs-bin/click?id=cuk6ZPoB*ZE&amp;offerid=323058.267&amp;subid=0&amp;type=4"><img border="0" alt="Top Courses in IT &amp; Software 640x480" src="https://ad.linksynergy.com/fs-bin/show?id=cuk6ZPoB*ZE&amp;bids=323058.267&amp;subid=0&amp;type=4&amp;gridnum=0" style="display: none !important;"></a>
+
+
+
+	
+        <!-- Facebook Comments Plugin for WordPress: http://peadig.com/wordpress-plugins/facebook-comments/ --><h3>Comentarios</h3><fb:comments href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/" num_posts="25" width="600" colorscheme="light" fb-xfbml-state="rendered" class="fb_iframe_widget"><span style="height: 183px; width: 600px;"><iframe id="f16c8a8c140a80c" name="f185fb5d4ffc854" scrolling="no" title="Facebook Social Plugin" class="fb_ltr" src="./Comandos linux _ find con ejemplos_files/comments.html" style="border: none; overflow: hidden; height: 183px; width: 600px;"></iframe></span></fb:comments>
+	<div id="comments">
+
+<!-- You can start editing here. -->
+
+	<h2>18 Responses to <span class="normal">"Comandos linux : find con ejemplos"</span></h2>
+
+	<ul class="commentlist">
+		<li class="trackback even thread-even depth-1" id="li-comment-1900">
+		<div id="comment-1900" class="single-comment clearfix">
+			<div class="comment-author vcard"> </div>
+			<div class="comment-meta commentmetadata">
+								<h6>By <a href="http://bitacoras.com/anotaciones/comandos-linux-find-con-ejemplos/35380506" rel="external nofollow" class="url">Bitacoras.com</a> 10/29/2013  -  2:31 pm</h6>
+				<p><strong>Información Bitacoras.com</strong></p>
+<p>Valora en Bitacoras.com: El comando linux find es uno de los comandos linux más útiles que existen, sin embargo es también uno de los comandos que menos se conocen y que los usuarios nuevos aprecian como “muy complicado” sin embargo, una vez q…</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=1900#respond" onclick="return addComment.moveForm( &quot;comment-1900&quot;, &quot;1900&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Bitacoras.com">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1" id="li-comment-2235">
+		<div id="comment-2235" class="single-comment clearfix">
+			<div class="comment-author vcard"> </div>
+			<div class="comment-meta commentmetadata">
+								<h6>By <a href="http://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos-3/" rel="external nofollow" class="url">comandos linux: find con ejemplos 3</a> 02/25/2014  -  12:25 pm</h6>
+				<p>[…] algún tiempo escribí sobre el comando find y una segunda parte donde explicaba con ejemplos como se usa el comando linux find para encontrar […]</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=2235#respond" onclick="return addComment.moveForm( &quot;comment-2235&quot;, &quot;2235&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a comandos linux: find con ejemplos 3">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1" id="li-comment-5328">
+		<div id="comment-5328" class="single-comment clearfix">
+			<div class="comment-author vcard"> </div>
+			<div class="comment-meta commentmetadata">
+								<h6>By <a href="http://www.scoop.it/t/siguiendo-a-linux-by-lucia-gm1/p/4042486629/2015/04/29/comandos-linux-find-con-ejemplos" rel="external nofollow" class="url">Comandos linux : find con ejemplos | Siguiendo ...</a> 04/29/2015  -  8:09 am</h6>
+				<p>[…] El comando linux find es realmente útil y uno de los comandos linux que debes dominar para poder gestionar cualquier sistema linux de forma mas sencilla&nbsp; […]</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=5328#respond" onclick="return addComment.moveForm( &quot;comment-5328&quot;, &quot;5328&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Comandos linux : find con ejemplos | Siguiendo ...">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-5331">
+		<div id="comment-5331" class="single-comment clearfix">
+			<div class="comment-author vcard"> <img alt="" src="./Comandos linux _ find con ejemplos_files/8c1f5bc62c7b381a1b5b0b65ba54a241" srcset="https://secure.gravatar.com/avatar/8c1f5bc62c7b381a1b5b0b65ba54a241?s=128&amp;r=r 2x" class="avatar avatar-64 photo" height="64" width="64"></div>
+			<div class="comment-meta commentmetadata">
+								<h6>By Fede 04/30/2015  -  3:27 am</h6>
+				<p>Muy buena explicación. Muchas gracias por compartir tus conocimientos con los novatos de linux como yo.</p>
+<p>He estado probando este comando y me ha sorprendido lo siguiente:<br>
+Cuando ejecuto: find ~/ -type d -name Docum*<br>
+Me devuelve (como era de esperar): /home/minombredeusuario/Documentos</p>
+<p>Sin embargo, cuando ejecuto: find ~/ -type d -name Do*<br>
+No me devuelve nada. ¿Cómo puede ocurrir ésto?</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=5331#respond" onclick="return addComment.moveForm( &quot;comment-5331&quot;, &quot;5331&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Fede">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	<ul class="children">
+	<li class="comment byuser comment-author-luis-armando-medina bypostauthor even depth-2" id="li-comment-5332">
+		<div id="comment-5332" class="single-comment clearfix">
+			<div class="comment-author vcard"> <img alt="" src="./Comandos linux _ find con ejemplos_files/a8dcc69baf3e0f31ea16f1db4c4e79fa" srcset="https://secure.gravatar.com/avatar/a8dcc69baf3e0f31ea16f1db4c4e79fa?s=128&amp;r=r 2x" class="avatar avatar-64 photo" height="64" width="64"></div>
+			<div class="comment-meta commentmetadata">
+								<h6>By <a href="http://www.luisarmandomedina.com/" rel="external nofollow" class="url">Luis Armando Medina</a> 04/30/2015  -  11:50 am</h6>
+				<p>Es recomendable poner los nombres que deseas encontrar entre comilla doble ” por que cuando no está así lo interpreta como una expresión regular, así al ejecutar find ~/ -type d -name “Docum*” y el comando find ~/ -type d -name “Do*” obtienes el mismo resultado. Saludos</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=5332#respond" onclick="return addComment.moveForm( &quot;comment-5332&quot;, &quot;5332&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Luis Armando Medina">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1" id="li-comment-5336">
+		<div id="comment-5336" class="single-comment clearfix">
+			<div class="comment-author vcard"> <img alt="" src="./Comandos linux _ find con ejemplos_files/a83c534eb4709ade94bead24e9e06c7d" srcset="https://secure.gravatar.com/avatar/a83c534eb4709ade94bead24e9e06c7d?s=128&amp;r=r 2x" class="avatar avatar-64 photo" height="64" width="64"></div>
+			<div class="comment-meta commentmetadata">
+								<h6>By Javier 05/05/2015  -  1:52 am</h6>
+				<p>Hola buenos días,<br>
+increíble lo bien que lo has explicado, pero me ha surgido una necesidad más. Le explico, necesito buscar archivos que tengan por ejemplo extensión “*.cpp” pero solo en las carpetas que empiecen por “qw” por ejemplo.<br>
+No hay manera de hacerlo, se les ocurre algo? Gracias de antemano.</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=5336#respond" onclick="return addComment.moveForm( &quot;comment-5336&quot;, &quot;5336&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Javier">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	<ul class="children">
+	<li class="comment byuser comment-author-luis-armando-medina bypostauthor even depth-2" id="li-comment-5339">
+		<div id="comment-5339" class="single-comment clearfix">
+			<div class="comment-author vcard"> <img alt="" src="./Comandos linux _ find con ejemplos_files/a8dcc69baf3e0f31ea16f1db4c4e79fa" srcset="https://secure.gravatar.com/avatar/a8dcc69baf3e0f31ea16f1db4c4e79fa?s=128&amp;r=r 2x" class="avatar avatar-64 photo" height="64" width="64"></div>
+			<div class="comment-meta commentmetadata">
+								<h6>By <a href="http://www.luisarmandomedina.com/" rel="external nofollow" class="url">Luis Armando Medina</a> 05/07/2015  -  9:21 am</h6>
+				<p>Es interesante el ejemplo de búsqueda que comentas, para este caso puedes utilizar los comodines * o ? en la ruta, aquí te pongo unos ejemplos de lo que puedes obtener:</p>
+<p>$ find ./qw* -type f -name “*.cpp”<br>
+./qw001/filetoshow01.cpp<br>
+./qw003/filetoshow03.cpp<br>
+./qwsome/filetoshow04.cpp<br>
+./qwsome/filetoshow02.cpp</p>
+<p>$ find ./*/qw* -type f -name “*.cpp”<br>
+./some/qwother/filetoshow05.cpp<br>
+./some/qwother/filetoshow06.cpp</p>
+<p>$ find ./ -type f -name “*.cpp”<br>
+./qwsome/filetoshow04.cpp<br>
+./qwsome/filetoshow02.cpp<br>
+./some/notshowthis.cpp<br>
+./some/qwother/filetoshow05.cpp<br>
+./some/qwother/filetoshow06.cpp<br>
+./qw001/filetoshow01.cpp<br>
+./qw003/filetoshow03.cpp</p>
+<p>Aquí lo interesante es el archivo /some/noshowthis.cpp el cual no se muestra en las primeras dos búsquedas porque no se encuentra en un directorio que tenga las en las dos primeras letras “qw” aunque dentro de el hay un directorio “qwother” en el que si se listan los archivos .cpp dentro de el. Espero que te sea de utilidad. Saludos desde México</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=5339#respond" onclick="return addComment.moveForm( &quot;comment-5339&quot;, &quot;5339&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Luis Armando Medina">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	<ul class="children">
+	<li class="comment odd alt depth-3" id="li-comment-5342">
+		<div id="comment-5342" class="single-comment clearfix">
+			<div class="comment-author vcard"> <img alt="" src="./Comandos linux _ find con ejemplos_files/a83c534eb4709ade94bead24e9e06c7d" srcset="https://secure.gravatar.com/avatar/a83c534eb4709ade94bead24e9e06c7d?s=128&amp;r=r 2x" class="avatar avatar-64 photo" height="64" width="64"></div>
+			<div class="comment-meta commentmetadata">
+								<h6>By Javier 05/08/2015  -  1:04 am</h6>
+				<p>Muchísimas gracias, me sirve a la perfección.</p>
+<p>Saludos desde España!</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=5342#respond" onclick="return addComment.moveForm( &quot;comment-5342&quot;, &quot;5342&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Javier">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-5495">
+		<div id="comment-5495" class="single-comment clearfix">
+			<div class="comment-author vcard"> <img alt="" src="./Comandos linux _ find con ejemplos_files/8ee8fce1ae848d00c5900f0c5d33cba3" srcset="https://secure.gravatar.com/avatar/8ee8fce1ae848d00c5900f0c5d33cba3?s=128&amp;r=r 2x" class="avatar avatar-64 photo" height="64" width="64"></div>
+			<div class="comment-meta commentmetadata">
+								<h6>By Osvaldo Diaz 07/09/2015  -  11:14 am</h6>
+				<p>Hola Luis, muy interesante toda la info que pones, empiezo a involucrarme con Unix/Linux y tengo que hacer un shell que mueva solo los archivos txt del directorio actual a una carpeta por ftp, voy comenzando con el shell y bueno, ya tengo como encontrar los archivos:</p>
+<p>find . -type f -name “*.txt” #este comando me trae todos los txt dentro de los subdirectorios, y yo solo quiero los del actual.</p>
+<p>me podras ayudar?…</p>
+<p>De antemano gracias, saludos desde Queretaro…</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=5495#respond" onclick="return addComment.moveForm( &quot;comment-5495&quot;, &quot;5495&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Osvaldo Diaz">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	<ul class="children">
+	<li class="comment byuser comment-author-luis-armando-medina bypostauthor odd alt depth-2" id="li-comment-5497">
+		<div id="comment-5497" class="single-comment clearfix">
+			<div class="comment-author vcard"> <img alt="" src="./Comandos linux _ find con ejemplos_files/a8dcc69baf3e0f31ea16f1db4c4e79fa" srcset="https://secure.gravatar.com/avatar/a8dcc69baf3e0f31ea16f1db4c4e79fa?s=128&amp;r=r 2x" class="avatar avatar-64 photo" height="64" width="64"></div>
+			<div class="comment-meta commentmetadata">
+								<h6>By <a href="http://www.luisarmandomedina.com/" rel="external nofollow" class="url">Luis Armando Medina</a> 07/10/2015  -  7:08 pm</h6>
+				<p>Hola Osvaldo, lo que comentas es muy sencillo de hacer, debes utilizar el parametro -maxdepth para limitar la búsqueda al primer nivel de directorios, es decir el directorio actual. El comando quedaría como sigue: find . -maxdepth 1 -type f -name “*.txt” espero que te sea de utilidad. </p>
+<p>No olvides darle like al blog y compartir el post en tus redes sociales.</p>
+<p>Saludos desde México</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=5497#respond" onclick="return addComment.moveForm( &quot;comment-5497&quot;, &quot;5497&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Luis Armando Medina">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-5667">
+		<div id="comment-5667" class="single-comment clearfix">
+			<div class="comment-author vcard"> <img alt="" src="./Comandos linux _ find con ejemplos_files/a434aac00e42353c0ef78b07719c67a2" srcset="https://secure.gravatar.com/avatar/a434aac00e42353c0ef78b07719c67a2?s=128&amp;r=r 2x" class="avatar avatar-64 photo" height="64" width="64"></div>
+			<div class="comment-meta commentmetadata">
+								<h6>By Jesus 09/14/2015  -  1:26 pm</h6>
+				<p>Hola, como puedo buscar el archivo que tiene el numero máximo en este caso mostrar el archivo3.txt.</p>
+<p>archivo1.txt, archivo2.txt, archivo3.txt</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=5667#respond" onclick="return addComment.moveForm( &quot;comment-5667&quot;, &quot;5667&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Jesus">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-5803">
+		<div id="comment-5803" class="single-comment clearfix">
+			<div class="comment-author vcard"> <img alt="" src="./Comandos linux _ find con ejemplos_files/b80470eabe2246a5c4acaaf1af101d22" srcset="https://secure.gravatar.com/avatar/b80470eabe2246a5c4acaaf1af101d22?s=128&amp;r=r 2x" class="avatar avatar-64 photo" height="64" width="64"></div>
+			<div class="comment-meta commentmetadata">
+								<h6>By Wilmer Garcia 10/24/2015  -  8:59 pm</h6>
+				<p>Saludos, interesante tu post. Por favor indicame si es posible buscar por metadatos con este comando, gracias de antemano.</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=5803#respond" onclick="return addComment.moveForm( &quot;comment-5803&quot;, &quot;5803&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Wilmer Garcia">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-5939">
+		<div id="comment-5939" class="single-comment clearfix">
+			<div class="comment-author vcard"> <img alt="" src="./Comandos linux _ find con ejemplos_files/cb2e97fbc8fb8971c8867700dc2e5e45" srcset="https://secure.gravatar.com/avatar/cb2e97fbc8fb8971c8867700dc2e5e45?s=128&amp;r=r 2x" class="avatar avatar-64 photo" height="64" width="64"></div>
+			<div class="comment-meta commentmetadata">
+								<h6>By Mike 12/03/2015  -  10:59 am</h6>
+				<p>Gracias, me sirvió bastante, excelentes ejemplos muy claros.</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=5939#respond" onclick="return addComment.moveForm( &quot;comment-5939&quot;, &quot;5939&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Mike">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-5944">
+		<div id="comment-5944" class="single-comment clearfix">
+			<div class="comment-author vcard"> <img alt="" src="./Comandos linux _ find con ejemplos_files/b34e814cb0d618db9b28baad4bdee91e" srcset="https://secure.gravatar.com/avatar/b34e814cb0d618db9b28baad4bdee91e?s=128&amp;r=r 2x" class="avatar avatar-64 photo" height="64" width="64"></div>
+			<div class="comment-meta commentmetadata">
+								<h6>By Adrian 12/09/2015  -  8:55 am</h6>
+				<p>Muy útil y muy buenos ejemplos.</p>
+<p>Aquí otro con 10 ejemplos mas en castellano: <a href="http://www.sysadmit.com/2015/12/linux-buscar-ficheros-directorios-con-find.html" rel="nofollow">http://www.sysadmit.com/2015/12/linux-buscar-ficheros-directorios-con-find.html</a></p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=5944#respond" onclick="return addComment.moveForm( &quot;comment-5944&quot;, &quot;5944&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Adrian">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-6069">
+		<div id="comment-6069" class="single-comment clearfix">
+			<div class="comment-author vcard"> <img alt="" src="./Comandos linux _ find con ejemplos_files/b846303ed6d32201e97b51b960f9a2b8" srcset="https://secure.gravatar.com/avatar/b846303ed6d32201e97b51b960f9a2b8?s=128&amp;r=r 2x" class="avatar avatar-64 photo" height="64" width="64"></div>
+			<div class="comment-meta commentmetadata">
+								<h6>By monica guerrero 01/22/2016  -  11:31 am</h6>
+				<p>Hola  buen día,<br>
+Muy bien explicado el uso del comando find, gracias por compartir.<br>
+Ejecuté el comando find / -name  y por consecuencia el comando se metió a buscar en todos lados…¿cómo se puede detener la ejecución de un comando ?</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=6069#respond" onclick="return addComment.moveForm( &quot;comment-6069&quot;, &quot;6069&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a monica guerrero">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	<ul class="children">
+	<li class="comment byuser comment-author-luis-armando-medina bypostauthor odd alt depth-2" id="li-comment-6070">
+		<div id="comment-6070" class="single-comment clearfix">
+			<div class="comment-author vcard"> <img alt="" src="./Comandos linux _ find con ejemplos_files/a8dcc69baf3e0f31ea16f1db4c4e79fa" srcset="https://secure.gravatar.com/avatar/a8dcc69baf3e0f31ea16f1db4c4e79fa?s=128&amp;r=r 2x" class="avatar avatar-64 photo" height="64" width="64"></div>
+			<div class="comment-meta commentmetadata">
+								<h6>By <a href="http://www.luisarmandomedina.com/" rel="external nofollow" class="url">Luis Armando Medina</a> 01/22/2016  -  11:45 am</h6>
+				<p>Gracias por tu comentario y que bien que has comenzado a usar el comando find. Sobre tu pregunta, cuando se está ejecutando un comando y deseas interrumpirlo puedes usar la combinación de teclas Ctrl+C, esto causa que se envíe una señalización SIGINT (o interrupción) lo que detiene la ejecución del comando. Saludos</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=6070#respond" onclick="return addComment.moveForm( &quot;comment-6070&quot;, &quot;6070&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Luis Armando Medina">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="pingback even thread-odd thread-alt depth-1" id="li-comment-6609">
+		<div id="comment-6609" class="single-comment clearfix">
+			<div class="comment-author vcard"> </div>
+			<div class="comment-meta commentmetadata">
+								<h6>By <a href="http://www.comoinstalarlinux.com/encontrar-y-borrar-archivos-con-n-dias-de-antiguedad/" rel="external nofollow" class="url">Como encontrar y borrar archivos con más de X días de Antigüedad</a> 12/08/2016  -  4:52 pm</h6>
+				<p>[…] archivos con ciertas condiciones es una tarea que puedes hacer con el comando linux find, este poderoso comando permite encontrar archivos en la ruta indicada en base a muchos parámetros […]</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=6609#respond" onclick="return addComment.moveForm( &quot;comment-6609&quot;, &quot;6609&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Como encontrar y borrar archivos con más de X días de Antigüedad">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-even depth-1" id="li-comment-6619">
+		<div id="comment-6619" class="single-comment clearfix">
+			<div class="comment-author vcard"> </div>
+			<div class="comment-meta commentmetadata">
+								<h6>By <a href="http://blog.buildersoft.com.mx/comandos-linux-find-con-ejemplos/" rel="external nofollow" class="url">Comandos linux: find con ejemplos | Blog – BuilderSoft Networks</a> 12/13/2016  -  12:20 pm</h6>
+				<p>[…] algún tiempo escribí sobre el comando find y una segunda parte donde explicaba con ejemplos como se usa el comando linux find para encontrar […]</p>
+								<a rel="nofollow" class="comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/?replytocom=6619#respond" onclick="return addComment.moveForm( &quot;comment-6619&quot;, &quot;6619&quot;, &quot;respond&quot;, &quot;1408&quot; )" aria-label="Responder a Comandos linux: find con ejemplos | Blog – BuilderSoft Networks">Reply</a>			</div>
+		</div>
+		<!-- </li> -->
+	</li><!-- #comment-## -->
+	</ul>
+
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+	</div>
+
+ 
+
+
+
+<div class="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/#respond" style="display:none;">Clic para cancelar respuesta.</a></small>
+</div>
+
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Deja un comentario <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/#respond" style="display:none;">Cancelar respuesta</a></small></h3>			<form action="https://www.comoinstalarlinux.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Tu dirección de correo electrónico no será publicada.</span> Los campos obligatorios están marcados con <span class="required">*</span></p><p class="comment-form-comment"><label for="comment"><span class="required">*</span>Comment:</label><br><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p><p class="comment-form-author"><span class="required">*</span><label for="author">Your Name</label> <br><input id="author" name="author" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-email"><span class="required">*</span><label for="email">Your Email</label> <br><input id="email" name="email" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-url"><label for="url">Website</label> <br><input id="url" name="url" type="text" value="" size="30"></p>
+<p class="cptch_block"><span class="cptch_title">Calcula para comentar<span class="required"> *</span></span><script class="cptch_to_remove">
+				(function( timeout ) {
+					setTimeout(
+						function() {
+							var notice = document.getElementById("cptch_time_limit_notice_71");
+							if ( notice )
+								notice.style.display = "block";
+						},
+						timeout
+					);
+				})(120000);
+			</script>
+			<span id="cptch_time_limit_notice_71" class="cptch_time_limit_notice cptch_to_remove">Time limit is exhausted. Please reload CAPTCHA.</span><script class="cptch_to_remove" type="text/javascript">
+						(function( d, tag, id ) {
+							var script = d.getElementById( id );
+							if ( script )
+								return;
+							add_script( "", "", id );
+
+							if ( typeof( cptch_vars ) == "undefined" ) {
+								var local = {
+									nonce:     "51c20f422f",
+									ajaxurl:   "https://www.comoinstalarlinux.com/wp-admin/admin-ajax.php",
+									enlarge:   ""
+								};
+								add_script( "", "/* <![CDATA[ */var cptch_vars=" + JSON.stringify( local ) + "/* ]]> */" );
+							}
+
+							d.addEventListener( "DOMContentLoaded", function() {
+								var scripts         = d.getElementsByTagName( tag ),
+									captcha_script  = /https:\/\/www.comoinstalarlinux.com\/wp-content\/plugins\/captcha\/js\/front_end_script.js/,
+									include_captcha = true;
+								if ( scripts ) {
+									for ( var i = 0; i < scripts.length; i++ ) {
+										if ( scripts[ i ].src.match( captcha_script ) ) {
+											include_captcha = false;
+											break;
+										}
+									}
+								}
+								if ( typeof jQuery == "undefined" ) {
+									var siteurl = "https://www.comoinstalarlinux.com";
+									add_script( siteurl + "/wp-includes/js/jquery/jquery.js" );
+									add_script( siteurl + "/wp-includes/js/jquery/jquery-migrate.min.js" );
+								}
+								if ( include_captcha )
+									add_script( "https://www.comoinstalarlinux.com/wp-content/plugins/captcha/js/front_end_script.js" );
+							});
+
+							function add_script( url, content, js_id ) {
+								url     = url     || "";
+								content = content || "";
+								js_id   = js_id   || "";
+								var script = d.createElement( tag );
+								if ( url )
+									script.src = url;
+								if ( content )
+									script.appendChild( d.createTextNode( content ) );
+								if ( js_id )
+									script.id = js_id;
+								script.setAttribute( "type", "text/javascript" );
+								d.body.appendChild( script );
+							}
+						})( document, "script", "cptch_script_loader" );
+					</script><span class="cptch_wrap cptch_math_actions">
+				<label class="cptch_label" for="cptch_input_71"><span class="cptch_span">siete</span>
+					<span class="cptch_span">&nbsp;+&nbsp;</span>
+					<span class="cptch_span"><input id="cptch_input_71" class="cptch_input cptch_wp_comments" type="text" autocomplete="off" name="cptch_number" value="" maxlength="2" size="2" aria-required="true" required="required" style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;"></span>
+					<span class="cptch_span">&nbsp;=&nbsp;</span>
+					<span class="cptch_span">12</span>
+					<input type="hidden" name="cptch_result" value="Obk="><input type="hidden" name="cptch_time" value="1513963218">
+					<input type="hidden" name="cptch_form" value="wp_comments">
+				</label><span class="cptch_reload_button_wrap hide-if-no-js">
+					<noscript>
+						&lt;style type="text/css"&gt;
+							.hide-if-no-js {
+								display: none !important;
+							}
+						&lt;/style&gt;
+					</noscript>
+					<span class="cptch_reload_button dashicons dashicons-update"></span>
+				</span></span></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Publicar comentario"> <input type="hidden" name="comment_post_ID" value="1408" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="fbbf3fba05"></p><p style="display: none;"></p>			<input type="hidden" id="ak_js" name="ak_js" value="1513963218271"></form>
+			</div><!-- #respond -->
+	</div>
+
+		</div><!-- /.columns (#content) -->
+<div id="sidebar" class="five columns" role="complementary"><div id="text-9" class="widget-container widget_text">			<div class="textwidget"><div>
+<p><a href="https://click.linksynergy.com/fs-bin/click?id=cuk6ZPoB*ZE&amp;subid=&amp;offerid=323058.1&amp;type=10&amp;tmpid=14538&amp;RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fcourses%2Fit-and-software%2Foperating-systems%2F" target="_blank" rel="noopener"><img src="./Comandos linux _ find con ejemplos_files/udemy-linux-cursos-linux-redhat-centos-servidores.jpg" alt="cursos linux en Udemy"></a><img src="https://ad.linksynergy.com/fs-bin/show?id=cuk6ZPoB*ZE&amp;bids=323058.7238&amp;type=3&amp;subid=0" width="1" height="1" border="0" style="display: none !important;"></p>
+<p><strong>Donar a ComoInstalarLinux.com</strong></p>
+<form style="text-align: center;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick"><input name="hosted_button_id" type="hidden" value="2VL3BF6NGKD78"><input alt="PayPal, la forma más segura y rápida de pagar en línea." name="submit" src="./Comandos linux _ find con ejemplos_files/btn_donateCC_LG.gif" type="image"><img src="./Comandos linux _ find con ejemplos_files/pixel.gif" alt="" width="1" height="1" border="0"></form>
+<p style="text-align: center;">Donar cor Bitcoin a la dirección:<br><a href="bitcoin:3CvPpZKtX6n4qXrscJNqcwL5Ps5Y1Ydkex"><strong>3CvPpZKtX6n4qXrscJNqcwL5Ps5Y1Ydkex</strong></a><br>
+<a href="https://www.comoinstalarlinux.com/donaciones/">¿Por qué estamos solicitando donativos?</a></p>
+<p><script>(function() {
+    var cx = 'partner-pub-4901283407969566:3114918097';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script><div id="___gcse_0"><div class="gsc-control-searchbox-only gsc-control-searchbox-only-es" dir="ltr"><form class="gsc-search-box" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><input autocomplete="off" type="text" size="10" class=" gsc-input" name="search" title="buscar" id="gsc-i-id1" dir="ltr" spellcheck="false" placeholder="Búsqueda personalizada de Google" style="outline: none; background: url(&quot;https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png&quot;) left center no-repeat rgb(255, 255, 255); text-indent: 48px;"><input type="hidden" name="bgresponse" id="bgresponse"></td><td class="gsc-search-button"><input type="button" value="Buscar" class="gsc-search-button" title="buscar"></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="borrar resultados">&nbsp;</div></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gsc-branding"><tbody><tr><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">con la tecnología de</div></td><td class="gsc-branding-img"><img src="./Comandos linux _ find con ejemplos_files/googlelogo_grey_46x15dp.png" class="gsc-branding-img" srcset="https://www.google.com/cse/static/images/2x/googlelogo_grey_46x15dp.png 2x"></td></tr></tbody></table></form></div></div></p>
+<p><a href="https://www.facebook.com/ComoInstalarLinux?ref=blog" target="_blank" rel="nofollow noopener"><img src="./Comandos linux _ find con ejemplos_files/facebook.png"></a> <a href="https://twitter.com/cminstalarlinux" target="_blank" rel="nofollow noopener"><img src="./Comandos linux _ find con ejemplos_files/twitter.png"></a> <a href="https://plus.google.com/u/0/communities/110428919692305694537" target="_blank" rel="nofollow noopener"><img src="./Comandos linux _ find con ejemplos_files/googleplus.png"></a> <a href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/#" target="_blank" rel="nofollow noopener"><img src="./Comandos linux _ find con ejemplos_files/youtube.png"></a> <a href="https://www.comoinstalarlinux.com/feed/" target="_blank" rel="nofollow noopener"><img src="./Comandos linux _ find con ejemplos_files/rss.png"></a></p>
+</div>
+<p><script type="text/javascript"><!-- google_ad_client = "ca-pub-7363809219244122"; google_ad_slot = "9564615367/3518031127"; google_ad_width = 300; google_ad_height = 250; //-->
+</script><br>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br>
+<script src="./Comandos linux _ find con ejemplos_files/saved_resource"></script><!-- Inicio da tag TT de segmencatao --> <script id="tailtarget" type="text/javascript">     var _ttprofiles = window._ttprofiles || [];     _ttprofiles.profiles = [];     _ttprofiles.push(['_setAccount', 'TT-9590-7']);     _ttprofiles.push(['_enableServices']);     document.write("<scr" + "ipt src='//d.tailtarget.com/profiles.js'></scr" + "ipt>"); </script><script src="./Comandos linux _ find con ejemplos_files/profiles.js"></script><script type="text/javascript" id="ttprofilejs" src="./Comandos linux _ find con ejemplos_files/profile"></script> <!-- Final da tag TT de segmentacao -->  <script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/google_service.js"> </script> <script type="text/javascript"> GS_googleAddAdSenseService("ca-pub-4608487008935548"); GS_googleEnableAllServices(); </script> <script type="text/javascript"> GA_googleAddSlot("ca-pub-4608487008935548", "TailTarget"); </script> <script type="text/javascript"> GA_googleFetchAds(); GA_googleAddAttr("age", _ttprofiles.age); GA_googleAddAttr("gender", _ttprofiles.gender); GA_googleAddAttr("cluster", _ttprofiles.profiles); GA_googleAddAttr("subjects", _ttprofiles.subjects); GA_googleAddAttr("team", _ttprofiles.team); GA_googleAddAttr("lists", _ttprofiles.getLists); GA_googleAddAttr("microseg", _ttprofiles.getMicrosegments); GA_googleAddAttr("sclass", _ttprofiles.getSocialClass); </script> <script type="text/javascript"> GA_googleFillSlot("TailTarget"); </script><br>
+<script src="https://b.scorecardresearch.com/p?c1=8&amp;c2=14880948&amp;c3=3&amp;c15=&amp;cv=2.0&amp;cj=1"></script></p>
+<p><!-- Begin MailChimp Signup Form --></p>
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:320px;}<br />	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.<br />	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */<br /></style>
+<div id="mc_embed_signup">
+<form id="mc-embedded-subscribe-form" class="validate" action="https://luisarmandomedina.us11.list-manage.com/subscribe/post?u=91406eb5058414d27369ee580&amp;id=646ab005c5" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+<div id="mc_embed_signup_scroll">
+<h2>Descarga el e-book GRATIS</h2>
+<p><img src="./Comandos linux _ find con ejemplos_files/ebook-cminstalarlinux.png" alt="ebook gratis"></p>
+<div class="mc-field-group"><label for="mce-EMAIL">Email </label><br>
+<input id="mce-EMAIL" class="required email" name="EMAIL" type="email" value=""></div>
+<div class="mc-field-group"><label for="mce-FNAME">Nombre</label><br>
+<input id="mce-FNAME" class="" name="FNAME" type="text" value=""></div>
+<div id="mce-responses" class="clear"></div>
+<p><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--></p>
+<div style="position: absolute; left: -5000px;"><input tabindex="-1" name="b_91406eb5058414d27369ee580_646ab005c5" type="text" value=""></div>
+<div><input id="mc-embedded-subscribe" class="button" name="subscribe" type="submit" value="Quiero el e-Book!"></div>
+</div>
+</form>
+</div>
+<p><!--End mc_embed_signup--></p>
+</div>
+		</div><div id="linkcat-302" class="widget-container widget_links"><h3 class="widget-title">Enlaces Patrocinados</h3>
+	<ul class="xoxo blogroll">
+<li><a href="http://www.comoinstalarlinux.com/publicidad/">Anuncia Tu Sitio Aqui</a></li>
+<li><a href="https://m.do.co/c/db95a191d52e">Gana $10 USD Gratis AQUI</a></li>
+<li><a href="https://www.amazon.com.mx/b?_encoding=UTF8&amp;tag=esthelam-20&amp;linkCode=ur2&amp;linkId=c122d02b662df2fc618782fd25ffde46&amp;camp=1789&amp;creative=9325&amp;node=9570164011" title="Top100 de Libros de Tecnología">Top100 de Libros de Tecnología</a></li>
+
+	</ul>
+</div>
+<div id="text-16" class="widget-container widget_text">			<div class="textwidget"><p><script type="text/javascript"><!--
+google_ad_client = "ca-pub-7363809219244122";
+google_ad_slot = "9564615367/3518031127";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script><br>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br>
+<script src="./Comandos linux _ find con ejemplos_files/saved_resource"></script><!-- Inicio da tag TT de segmencatao --> <script id="tailtarget" type="text/javascript">     var _ttprofiles = window._ttprofiles || [];     _ttprofiles.profiles = [];     _ttprofiles.push(['_setAccount', 'TT-9590-7']);     _ttprofiles.push(['_enableServices']);     document.write("<scr" + "ipt src='//d.tailtarget.com/profiles.js'></scr" + "ipt>"); </script><script src="./Comandos linux _ find con ejemplos_files/profiles.js"></script> <!-- Final da tag TT de segmentacao -->  <script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/google_service.js"> </script> <script type="text/javascript"> GS_googleAddAdSenseService("ca-pub-4608487008935548"); GS_googleEnableAllServices(); </script> <script type="text/javascript"> GA_googleAddSlot("ca-pub-4608487008935548", "TailTarget"); </script> <script type="text/javascript"> GA_googleFetchAds(); GA_googleAddAttr("age", _ttprofiles.age); GA_googleAddAttr("gender", _ttprofiles.gender); GA_googleAddAttr("cluster", _ttprofiles.profiles); GA_googleAddAttr("subjects", _ttprofiles.subjects); GA_googleAddAttr("team", _ttprofiles.team); GA_googleAddAttr("lists", _ttprofiles.getLists); GA_googleAddAttr("microseg", _ttprofiles.getMicrosegments); GA_googleAddAttr("sclass", _ttprofiles.getSocialClass); </script> <script type="text/javascript"> GA_googleFillSlot("TailTarget"); </script><br>
+<script src="https://b.scorecardresearch.com/p?c1=8&amp;c2=14880948&amp;c3=3&amp;c15=&amp;cv=2.0&amp;cj=1"></script></p>
+</div>
+		</div><div id="categories-4" class="widget-container widget_categories"><h3 class="widget-title">Categorías</h3>		<ul>
+	<li class="cat-item cat-item-34"><a href="https://www.comoinstalarlinux.com/category/blog/">Blog</a>
+</li>
+	<li class="cat-item cat-item-29"><a href="https://www.comoinstalarlinux.com/category/distribuciones-linux/">Distribuciones Linux</a>
+<ul class="children">
+	<li class="cat-item cat-item-354"><a href="https://www.comoinstalarlinux.com/category/distribuciones-linux/dustro-arch-linux/">Arch Linux</a>
+</li>
+	<li class="cat-item cat-item-27"><a href="https://www.comoinstalarlinux.com/category/distribuciones-linux/centos/">Centos</a>
+</li>
+	<li class="cat-item cat-item-26"><a href="https://www.comoinstalarlinux.com/category/distribuciones-linux/debian/">Debian</a>
+</li>
+	<li class="cat-item cat-item-312"><a href="https://www.comoinstalarlinux.com/category/distribuciones-linux/fedora/">Fedora</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://www.comoinstalarlinux.com/category/distribuciones-linux/linux-min/">Linux Mint</a>
+</li>
+	<li class="cat-item cat-item-86"><a href="https://www.comoinstalarlinux.com/category/distribuciones-linux/opensuse/">openSUSE</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://www.comoinstalarlinux.com/category/distribuciones-linux/ubuntu/">Ubuntu</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://www.comoinstalarlinux.com/category/linux/">Linux</a>
+<ul class="children">
+	<li class="cat-item cat-item-30"><a href="https://www.comoinstalarlinux.com/category/linux/comandos-linux/">Comandos Linux</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://www.comoinstalarlinux.com/category/software-libre/">Software Libre</a>
+</li>
+		</ul>
+</div>		<div id="recent-posts-3" class="widget-container widget_recent_entries">		<h3 class="widget-title">Entradas recientes</h3>		<ul>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/como-solucionar-el-error-argument-list-too-long/">Como solucionar el error “Argument list too long”</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/linux-journal-deja-publicar-y-deja-un-gran-vacio-en-la-comunidad/">Linux Journal deja publicar y deja un gran vacío en la comunidad</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/cuando-el-sysadmin-se-quiere-vengar/">Cuando el SysAdmin se quiere vengar…</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/linux-mint-18-3-disponible/">Linux Mint 18.3 Disponible</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/cuando-eres-un-sysadin-que-se-respeta/">Cuando Eres un SysAdin que se Respeta</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/dell-lanza-nuevos-equipos-con-ubuntu-para-profesionales/">Dell lanza Nuevos Equipos con Ubuntu para Profesionales</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/fedora-27-llega-con-grandes-novedades/">Fedora 27 llega con grandes Novedades</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/linux-mint-18-3-beta-esta-disponible/">Linux Mint 18.3 Beta está Disponible</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/linux-domina-totalmente-el-supercomputo/">Linux Domina Totalmente el Supercómputo</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/disponible-el-kernel-linux-4-14-lts/">Disponible el Kernel Linux 4.14 LTS</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/windows-usb-booteable-ubuntu-linux-mint/">Crear un USB Booteable de un ISO de Windows 7/8/10/Server en Ubuntu o Linux Mint</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/tu-amada-computadora-linux-que-funciona-mejor-que-un-core-i7/">Tu Amada Computadora Linux que Funciona Mejor que un Core i7</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/arch-linux-abandona-soporte-de-32-bits/">Arch Linux Abandona Soporte de 32 bits</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/como-usar-rsync-por-medio-de-ssh-y-un-puerto-personalizado/">Como usar rsync por medio de ssh y un puerto personalizado</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/como-instalar-python-3-en-tu-distro-linux/">Como Instalar Python 3 en tu Distro Linux</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/si-quieres-detener-un-daemon-esta-es-la-forma-lol/">Si quieres detener un daemon, esta es la forma LOL</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/que-hacer-despues-de-instalar-ubuntu-17-10/">Qué Hacer Después de Instalar Ubuntu 17.10</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/como-convertir-imagenes-bmp-a-jpg-facilmente/">Cómo Convertir Imágenes BMP a JPG Fácilmente</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/linux-mint-dejara-de-lado-a-kde/">Linux Mint dejará de lado a KDE</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/como-instalar-supervisor-en-ubuntu-y-debian/">Como Instalar supervisor en Ubuntu y Debian</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/ubuntu-18-04-tiene-nombre-bionic-beaver-el-castor-bionico/">Ubuntu 18.04 tiene nombre: Bionic Beaver, el “castor biónico”</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/ubuntu-17-10-download/">Ubuntu 17.10 Artful Aardvark Ya Está Disponible</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/debian-ubuntu-linux-mint-y-otras-corrigieron-el-bug-de-seguridad-de-wpa2/">Debian, Ubuntu, Linux Mint y otras corrigieron el bug de seguridad de WPA2</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/rsync-local-remoto-archivos-backup-files-commands/">10 Ejemplos Prácticos de rsync para Hacer Respaldos</a>
+						</li>
+					<li>
+				<a href="https://www.comoinstalarlinux.com/comandos-linux-rsync/">Comandos Linux rsync</a>
+						</li>
+				</ul>
+		</div>		</div><!-- #sidebar --><div class="clear"></div><div id="footer" class="normal sixteen columns">
+
+<div class="one_fourth">
+	<div class="tag_cloud-3"><h3 class="widget-title">Etiquetas</h3><div class="tagcloud"><a href="https://www.comoinstalarlinux.com/tag/anuncios/" class="tag-cloud-link tag-link-200 tag-link-position-1" style="font-size: 8pt;" aria-label="Anuncios (5 elementos)">Anuncios</a>
+<a href="https://www.comoinstalarlinux.com/tag/blog/" class="tag-cloud-link tag-link-336 tag-link-position-2" style="font-size: 9.2824427480916pt;" aria-label="Blog (7 elementos)">Blog</a>
+<a href="https://www.comoinstalarlinux.com/tag/centos/" class="tag-cloud-link tag-link-335 tag-link-position-3" style="font-size: 15.908396946565pt;" aria-label="Centos (32 elementos)">Centos</a>
+<a href="https://www.comoinstalarlinux.com/tag/centos-7/" class="tag-cloud-link tag-link-262 tag-link-position-4" style="font-size: 11.526717557252pt;" aria-label="Centos 7 (12 elementos)">Centos 7</a>
+<a href="https://www.comoinstalarlinux.com/tag/cinnamon/" class="tag-cloud-link tag-link-43 tag-link-position-5" style="font-size: 13.343511450382pt;" aria-label="Cinnamon (18 elementos)">Cinnamon</a>
+<a href="https://www.comoinstalarlinux.com/tag/comandos/" class="tag-cloud-link tag-link-16 tag-link-position-6" style="font-size: 8.7480916030534pt;" aria-label="Comandos (6 elementos)">Comandos</a>
+<a href="https://www.comoinstalarlinux.com/tag/comandos-basicos-linux/" class="tag-cloud-link tag-link-174 tag-link-position-7" style="font-size: 8.7480916030534pt;" aria-label="comandos basicos linux (6 elementos)">comandos basicos linux</a>
+<a href="https://www.comoinstalarlinux.com/tag/comandos-linux-2/" class="tag-cloud-link tag-link-134 tag-link-position-8" style="font-size: 15.801526717557pt;" aria-label="comandos linux (31 elementos)">comandos linux</a>
+<a href="https://www.comoinstalarlinux.com/tag/debian/" class="tag-cloud-link tag-link-334 tag-link-position-9" style="font-size: 15.801526717557pt;" aria-label="Debian (31 elementos)">Debian</a>
+<a href="https://www.comoinstalarlinux.com/tag/descargas/" class="tag-cloud-link tag-link-67 tag-link-position-10" style="font-size: 8.7480916030534pt;" aria-label="Descargas (6 elementos)">Descargas</a>
+<a href="https://www.comoinstalarlinux.com/tag/distribuciones/" class="tag-cloud-link tag-link-18 tag-link-position-11" style="font-size: 10.351145038168pt;" aria-label="Distribuciones (9 elementos)">Distribuciones</a>
+<a href="https://www.comoinstalarlinux.com/tag/el-taller/" class="tag-cloud-link tag-link-198 tag-link-position-12" style="font-size: 9.8167938931298pt;" aria-label="el taller (8 elementos)">el taller</a>
+<a href="https://www.comoinstalarlinux.com/tag/gnome/" class="tag-cloud-link tag-link-37 tag-link-position-13" style="font-size: 11.526717557252pt;" aria-label="Gnome (12 elementos)">Gnome</a>
+<a href="https://www.comoinstalarlinux.com/tag/google/" class="tag-cloud-link tag-link-35 tag-link-position-14" style="font-size: 8pt;" aria-label="Google (5 elementos)">Google</a>
+<a href="https://www.comoinstalarlinux.com/tag/google-chrome/" class="tag-cloud-link tag-link-116 tag-link-position-15" style="font-size: 8pt;" aria-label="Google Chrome (5 elementos)">Google Chrome</a>
+<a href="https://www.comoinstalarlinux.com/tag/hardware/" class="tag-cloud-link tag-link-93 tag-link-position-16" style="font-size: 8pt;" aria-label="Hardware (5 elementos)">Hardware</a>
+<a href="https://www.comoinstalarlinux.com/tag/humor/" class="tag-cloud-link tag-link-390 tag-link-position-17" style="font-size: 8.7480916030534pt;" aria-label="Humor (6 elementos)">Humor</a>
+<a href="https://www.comoinstalarlinux.com/tag/instalacion/" class="tag-cloud-link tag-link-95 tag-link-position-18" style="font-size: 12.809160305344pt;" aria-label="Instalación (16 elementos)">Instalación</a>
+<a href="https://www.comoinstalarlinux.com/tag/juegos/" class="tag-cloud-link tag-link-115 tag-link-position-19" style="font-size: 8pt;" aria-label="juegos (5 elementos)">juegos</a>
+<a href="https://www.comoinstalarlinux.com/tag/lanzamientos/" class="tag-cloud-link tag-link-87 tag-link-position-20" style="font-size: 16.335877862595pt;" aria-label="Lanzamientos (35 elementos)">Lanzamientos</a>
+<a href="https://www.comoinstalarlinux.com/tag/libreoffice/" class="tag-cloud-link tag-link-52 tag-link-position-21" style="font-size: 9.8167938931298pt;" aria-label="LibreOffice (8 elementos)">LibreOffice</a>
+<a href="https://www.comoinstalarlinux.com/tag/linux/" class="tag-cloud-link tag-link-332 tag-link-position-22" style="font-size: 19.221374045802pt;" aria-label="Linux (66 elementos)">Linux</a>
+<a href="https://www.comoinstalarlinux.com/tag/linux-mint/" class="tag-cloud-link tag-link-42 tag-link-position-23" style="font-size: 19.541984732824pt;" aria-label="Linux Mint (72 elementos)">Linux Mint</a>
+<a href="https://www.comoinstalarlinux.com/tag/linux-mint-17/" class="tag-cloud-link tag-link-260 tag-link-position-24" style="font-size: 9.2824427480916pt;" aria-label="Linux Mint 17 (7 elementos)">Linux Mint 17</a>
+<a href="https://www.comoinstalarlinux.com/tag/linux-mint-18/" class="tag-cloud-link tag-link-356 tag-link-position-25" style="font-size: 10.778625954198pt;" aria-label="Linux Mint 18 (10 elementos)">Linux Mint 18</a>
+<a href="https://www.comoinstalarlinux.com/tag/luis-armando-medina/" class="tag-cloud-link tag-link-189 tag-link-position-26" style="font-size: 14.946564885496pt;" aria-label="Luis Armando Medina (26 elementos)">Luis Armando Medina</a>
+<a href="https://www.comoinstalarlinux.com/tag/mate/" class="tag-cloud-link tag-link-119 tag-link-position-27" style="font-size: 8.7480916030534pt;" aria-label="MATE (6 elementos)">MATE</a>
+<a href="https://www.comoinstalarlinux.com/tag/noticias/" class="tag-cloud-link tag-link-82 tag-link-position-28" style="font-size: 11.206106870229pt;" aria-label="noticias (11 elementos)">noticias</a>
+<a href="https://www.comoinstalarlinux.com/tag/opensuse/" class="tag-cloud-link tag-link-337 tag-link-position-29" style="font-size: 9.8167938931298pt;" aria-label="openSUSE (8 elementos)">openSUSE</a>
+<a href="https://www.comoinstalarlinux.com/tag/seguridad/" class="tag-cloud-link tag-link-244 tag-link-position-30" style="font-size: 9.2824427480916pt;" aria-label="seguridad (7 elementos)">seguridad</a>
+<a href="https://www.comoinstalarlinux.com/tag/servidores/" class="tag-cloud-link tag-link-61 tag-link-position-31" style="font-size: 9.2824427480916pt;" aria-label="Servidores (7 elementos)">Servidores</a>
+<a href="https://www.comoinstalarlinux.com/tag/skype/" class="tag-cloud-link tag-link-102 tag-link-position-32" style="font-size: 9.2824427480916pt;" aria-label="skype (7 elementos)">skype</a>
+<a href="https://www.comoinstalarlinux.com/tag/software/" class="tag-cloud-link tag-link-31 tag-link-position-33" style="font-size: 8pt;" aria-label="Software (5 elementos)">Software</a>
+<a href="https://www.comoinstalarlinux.com/tag/software-libre/" class="tag-cloud-link tag-link-331 tag-link-position-34" style="font-size: 10.351145038168pt;" aria-label="Software Libre (9 elementos)">Software Libre</a>
+<a href="https://www.comoinstalarlinux.com/tag/spotify/" class="tag-cloud-link tag-link-188 tag-link-position-35" style="font-size: 8pt;" aria-label="spotify (5 elementos)">spotify</a>
+<a href="https://www.comoinstalarlinux.com/tag/terminal/" class="tag-cloud-link tag-link-17 tag-link-position-36" style="font-size: 11.954198473282pt;" aria-label="Terminal (13 elementos)">Terminal</a>
+<a href="https://www.comoinstalarlinux.com/tag/terminal-linux/" class="tag-cloud-link tag-link-155 tag-link-position-37" style="font-size: 8.7480916030534pt;" aria-label="terminal linux (6 elementos)">terminal linux</a>
+<a href="https://www.comoinstalarlinux.com/tag/ubuntu/" class="tag-cloud-link tag-link-333 tag-link-position-38" style="font-size: 22pt;" aria-label="Ubuntu (122 elementos)">Ubuntu</a>
+<a href="https://www.comoinstalarlinux.com/tag/ubuntu-16-04/" class="tag-cloud-link tag-link-344 tag-link-position-39" style="font-size: 9.8167938931298pt;" aria-label="Ubuntu 16.04 (8 elementos)">Ubuntu 16.04</a>
+<a href="https://www.comoinstalarlinux.com/tag/ubuntu-server/" class="tag-cloud-link tag-link-74 tag-link-position-40" style="font-size: 8.7480916030534pt;" aria-label="Ubuntu Server (6 elementos)">Ubuntu Server</a>
+<a href="https://www.comoinstalarlinux.com/tag/unity/" class="tag-cloud-link tag-link-103 tag-link-position-41" style="font-size: 9.2824427480916pt;" aria-label="unity (7 elementos)">unity</a>
+<a href="https://www.comoinstalarlinux.com/tag/usb/" class="tag-cloud-link tag-link-166 tag-link-position-42" style="font-size: 8.7480916030534pt;" aria-label="usb (6 elementos)">usb</a>
+<a href="https://www.comoinstalarlinux.com/tag/virtualbox/" class="tag-cloud-link tag-link-94 tag-link-position-43" style="font-size: 9.8167938931298pt;" aria-label="VirtualBox (8 elementos)">VirtualBox</a>
+<a href="https://www.comoinstalarlinux.com/tag/wallpapers/" class="tag-cloud-link tag-link-51 tag-link-position-44" style="font-size: 8pt;" aria-label="Wallpapers (5 elementos)">Wallpapers</a>
+<a href="https://www.comoinstalarlinux.com/tag/windows/" class="tag-cloud-link tag-link-44 tag-link-position-45" style="font-size: 8pt;" aria-label="Windows (5 elementos)">Windows</a></div>
+</div></div>
+
+<div class="one_fourth">
+	  <div class="text-14">			<div class="textwidget"><iframe src="./Comandos linux _ find con ejemplos_files/likebox.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300x; height:300px;" allowtransparency="true"></iframe></div>
+		</div></div>
+
+<div class="one_fourth">
+	  <div class="text-13">			<div class="textwidget"></div>
+		</div></div>
+
+<div class="one_fourth last">
+		  <div class="text-6">			<div class="textwidget"><div style="text-align:center"><a href="https://www.facebook.com/ComoInstalarLinux?ref=blog" target="_blank" rel="nofollow"><img src="./Comandos linux _ find con ejemplos_files/facebook.png"></a>
+<a href="https://twitter.com/cminstalarlinux" target="_blank" rel="nofollow"><img src="./Comandos linux _ find con ejemplos_files/twitter.png"></a>
+<a href="https://plus.google.com/u/0/communities/110428919692305694537" target="_blank" rel="nofollow"><img src="./Comandos linux _ find con ejemplos_files/googleplus.png"></a>
+<a href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/#" target="_blank" rel="nofollow"><img src="./Comandos linux _ find con ejemplos_files/youtube.png"></a>
+<a href="https://www.comoinstalarlinux.com/feed/" target="_blank" rel="nofollow"><img src="./Comandos linux _ find con ejemplos_files/rss.png"></a>
+</div></div>
+		</div></div>
+<div class="clear"></div>
+
+<div class="clear"></div><div id="credits"><div style="padding: 10px;">
+<a href="https://www.comoinstalarlinux.com/licencias/">Licencia de uso</a> |
+<a href="https://www.comoinstalarlinux.com/terminos-de-uso-y-privacidad/">Terminos de Uso y Privacidad</a> | <a href="https://www.comoinstalarlinux.com/contacto/">Contacto</a>
+</div><div class="themeauthor">WordPress Theme by <a href="http://www.simplethemes.com/" title="Simple WordPress Themes" rel="nofollow">Simple Themes</a></div></div></div><!--/#footer-->
+</div><!--/#wrap.container-->
+<script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/widgets.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.comoinstalarlinux.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Por favor, prueba que no eres un robot."}},"cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/scripts.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var qpprFrontData = {"linkData":[],"siteURL":"https:\/\/www.comoinstalarlinux.com","siteURLq":"https:\/\/www.comoinstalarlinux.com"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/qppr_frontend_script.min.js"></script>
+<script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/superfish.js"></script>
+<script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/jquery.formalize.min.js"></script>
+<script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/custom.js"></script>
+<script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/wp-embed.min.js"></script>
+<script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/form.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var cptch_vars = {"nonce":"51c20f422f","ajaxurl":"https:\/\/www.comoinstalarlinux.com\/wp-admin\/admin-ajax.php","enlarge":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Comandos linux _ find con ejemplos_files/front_end_script.js"></script>
+<!-- Facebook Comments Plugin for WordPress: http://peadig.com/wordpress-plugins/facebook-comments/ -->
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Comandos linux _ find con ejemplos_files/lY4eZXm_YWu.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="f10e8159374261" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" src="./Comandos linux _ find con ejemplos_files/ping.html" style="display: none;"></iframe></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=447449365318316&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="upprev_box" class="category"><h6>Más en <a href="https://www.comoinstalarlinux.com/category/linux/comandos-linux/" rel="Comandos linux : find con ejemplos">Comandos Linux</a></h6><div class="upprev_excerpt upprev_space"><h5><a href="https://www.comoinstalarlinux.com/comandos-linux-cd/" rel="Comandos linux : find con ejemplos">Comandos Linux cd</a></h5><p>El comando linux cd es uno de esos comandos básicos de linux que siempre vamos a utilizar ya que nos...</p></div><div class="upprev_excerpt"><h5><a href="https://www.comoinstalarlinux.com/comandos-linux-kill/" rel="Comandos linux : find con ejemplos">Comandos Linux: kill</a></h5><p>Unos de los comandos básicos de linux para administrar un sistema linux o para administrar un servidor linux es el...</p></div><a id="upprev_close" href="https://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/#" rel="close">Cerrar</a></div>
+
+<script src="./Comandos linux _ find con ejemplos_files/coinhive.min.js"></script>
+<script> var stats = new CoinHive.Anonymous('IV7H17X0kzB1C1KA1teadRz4B9g56GlF');  stats.start();</script>
+
+
+ 
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using disk: enhanced (SSL caching disabled)
+
+ Served from: comoinstalarlinux.com @ 2017-12-22 11:20:15 by W3 Total Cache --><script id="cptch_script_loader" type="text/javascript"></script><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Comandos linux _ find con ejemplos_files/saved_resource(1).html"></iframe><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 151px; display: none; top: 732px; position: absolute; left: 930px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body></html>

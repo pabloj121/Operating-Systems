@@ -1,0 +1,31 @@
+Construye un script que sea lanzado con una periodicidad de un minuto y que borre los nombres
+de los archivos que cuelguen del directorio /tmp/varios y que comiencen por “core” (cree ese
+directorio y algunos archivos para poder realizar esta actividad). Utiliza la opción -v de la orden
+rm para generar como salida una frase de confirmación de los archivos borrados; queremos que
+el conjunto de estas salidas se añadan al archivo /tmp/listacores.
+Prueba la orden crontab -l para ver la lista actual de trabajos (consulte la ayuda para ver las
+restantes posibilidades de esta orden para gestionar la lista actual de trabajos).
+
+Creamos el script "aumentalista.sh":
+#!/bin/bash
+inicio=0
+fin=19
+
+while [ $inicio -le $fin ]
+do
+	touch /tmp/varios/coregen-`date +%M:%S:%N`
+	inicio=`expr $inicio + 1`
+done
+
+rm  -v /tmp/varios/core* 1>> /tmp/listacores
+
+en mi caso yo he optado porque cada vez que entre en el script 
+genere 20 archivos, así no tenfo que hacerlo manualmente
+
+
+
+Creamos el archivo crontab1:
+1 * * * * ./aumentalista.sh 
+
+Lanzamos crontab:
+[root@localhost Anfitrion]# crontab crontab1

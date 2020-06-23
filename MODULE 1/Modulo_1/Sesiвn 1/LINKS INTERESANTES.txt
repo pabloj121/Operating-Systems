@@ -1,0 +1,17 @@
+ 
+FHS (FILE HERARCHY STANDARD) = http://recursostic.educacion.es/observatorio/web/en/software/software-general/493-sagrario-peralta
+						       http://blog.desdelinux.net/estructura-de-directorios-en-linux/# (mas chula)
+
+
+USOS COMANDO FIND = http://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/
+
+[root@localhost ~]# cat /etc/fstab 
+#
+# /etc/fstab
+#
+LABEL=ROOT                                      /               auto    noatime         1 1
+tmpfs                                           /dev/shm        tmpfs   defaults        0 0
+tmp                                             /tmp            tmpfs   rw,mode=1777,fscontext=system_u:object_r:tmp_t:s0  0 0
+devpts                                          /dev/pts        devpts  gid=5,mode=620  0 0
+sysfs                                           /sys            sysfs   defaults        0 0
+proc                                            /proc           proc    defaults        0 0

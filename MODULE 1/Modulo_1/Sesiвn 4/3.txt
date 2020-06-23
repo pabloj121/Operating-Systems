@@ -1,0 +1,30 @@
+Lanza varias órdenes at utilizando distintas formas de especificar el tiempo como las siguientes:
+(será de utilidad la opción -v):
+a) a medianoche de hoy
+b) un minuto después de la medianoche de hoy
+c) a las 17 horas y 30 minutos de mañana
+d) a la misma hora en que estemos ahora pero del día 25 de diciembre del presente
+año
+e) a las 00:00 del 1 de enero del presente año
+
+
+a) a medianoche de hoy:
+[root@localhost Anfitrion]# at -f ./genera-apunte.sh midnight
+job 5 at Fri Nov  4 00:00:00 2016
+
+b) un minuto después de la medianoche de hoy:
+[root@localhost Anfitrion]# at -f ./genera-apunte.sh midnight +1 minutes
+job 6 at Fri Nov  4 00:01:00 2016
+
+c) a las 17 horas y 30 minutos de mañana:
+[root@localhost Anfitrion]# at -f ./genera-apunte.sh 17:30 tomorrow     
+job 7 at Fri Nov  4 17:30:00 2016
+
+d) a la misma hora en que estemos ahora pero del día 25 de diciembre del presente:
+
+[root@localhost Anfitrion]# at -f ./genera-apunte.sh DEC 25      
+job 8 at Sun Dec 25 08:58:00 2016
+
+e) a las 00:00 del 1 de enero del presente año:
+[root@localhost Anfitrion]# at -f ./genera-apunte.sh 00:00 JUN 1
+job 10 at Thu Jun  1 00:00:00 2017

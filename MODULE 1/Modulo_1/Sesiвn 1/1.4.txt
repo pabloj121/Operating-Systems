@@ -1,0 +1,29 @@
+Se trata de un fichero con los campos separados por dos puntos (:), como el siguiente ejemplo:
+
+david:x:520:520::/home/david:/bin/bash
+
+Su estructura es la siguiente:
+
+usuario:password:UID:GID:descripción:home:shell
+
+Por campos:
+
+    Usuario: Nombre de usuario
+    Password: En el caso que no se usen los shadow passwords, lo tendríamos cifrado en esta posición como el siguiente ejemplo:
+
+    root:$6$Wr66d.lZVwvEDcPUTAgL6XFtl1VLOLZORRALOLcUaaoQuN/Mqt8t909LuCJNzR1ZDEAD5HTHgi3H.bAQDDRbfd0ZGJEBRRRR5AAAAl1:0:0:root:/root:/bin/bash
+
+    En caso contrario simplemente tendremos una x:
+
+    root:x:0:0:root:/root:/bin/bash
+
+    UID: Identificador numérico de usuario, el caso especial del cero es para root
+    GID: Identificador numérico de grupo. De la misma manera que con el UID, el cero es siempre para root
+    Descripción: Descripción opcional de la cuenta. Se suele usar para dejar constancia del nombre real del usuario
+    Home: Directorio principal del usuario
+    Shell: Interprete de comando por defecto
+
+
+
+    SACADO DE: http://systemadmin.es/2010/08/formato-del-fichero-etcpasswd
+ 

@@ -1,0 +1,24 @@
+[root@localhost ~]# cat /etc/fstab 
+#
+# /etc/fstab
+#
+LABEL=ROOT                                      /               auto    noatime         1 1
+tmpfs                                           /dev/shm        tmpfs   defaults        0 0
+tmp                                             /tmp            tmpfs   rw,mode=1777,fscontext=system_u:object_r:tmp_t:s0  0 0
+devpts                                          /dev/pts        devpts  gid=5,mode=620  0 0
+sysfs                                           /sys            sysfs   defaults        0 0
+proc                                            /proc           proc    defaults        0 0
+[root@localhost ~]# cat /etc/mtab
+LABEL=ROOT / auto rw,noatime 0 0
+proc /proc proc rw 0 0
+sysfs /sys sysfs rw 0 0
+devpts /dev/pts devpts rw,gid=5,mode=620 0 0
+tmpfs /dev/shm tmpfs rw 0 0
+/tmp /tmp tmpfs rw,mode=1777 0 0
+none /proc/sys/fs/binfmt_misc binfmt_misc rw 0 0
+
+
+
+
+fstab es una lista de los sistemas de ficheros que serán montados en tiempo de arranque.
+mtab es una lista de los sistemas de ficheros actualmente montados, es decir si tiene un disco conectado pero no montado este no aparecerá en mtab, si lo montas si aparecerá

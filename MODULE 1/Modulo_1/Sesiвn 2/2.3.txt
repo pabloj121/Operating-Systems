@@ -1,0 +1,31 @@
+(a)
+
+[root@localhost ~]# tune2fs -c 100 /dev/loop0
+
+tune2fs 1.41.12 (17-May-2010)
+Setting maximal mount count to 100
+
+[root@localhost ~]# tune2fs -C 101 /dev/loop0
+
+tune2fs 1.41.12 (17-May-2010)
+Setting current mount count to 101
+
+
+
+Establecemos el numero maximo de montajes que se harán hasta que se realice la comprobación de la consistencia de /dev/loop0 a un valor que queremos, en  mi caso 100
+
+Estableciendo pues el contador de montajes en un numero mayor al establecido anteriormente (101 por ejemplo) en el siguiente arranque se comprobará la consistencia del sistema de archivos sin necesidad de esperar realmente a que se hagan 100 arranques del sistema.
+
+
+
+(b)
+
+Para reservar para uso exclusivo de un usuario un numero de bloques del sistema de archivos
+
+[root@localhost ~]# adduser Marialacantaora
+[root@localhost ~]# tunewfs -r 22 -u Marialacantaora /dev/loop1
+-bash: tunewfs: command not found
+[root@localhost ~]# tune2fs -r 22 -u Marialacantaora /dev/loop1
+tune2fs 1.41.12 (17-May-2010)
+Setting reserved blocks count to 22
+Setting reserved blocks uid to 500

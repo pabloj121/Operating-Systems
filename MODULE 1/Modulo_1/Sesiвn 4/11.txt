@@ -1,0 +1,38 @@
+Partimos del ejercicio 10:
+Creamos el script "aumentalista.sh":
+#!/bin/bash
+inicio=0
+fin=19
+
+while [ $inicio -le $fin ]
+do
+	touch /tmp/varios/coregen-`date +%M:%S:%N`
+	inicio=`expr $inicio + 1`
+done
+
+rm  -v /tmp/varios/core* 1>> /tmp/listacores
+
+en mi caso yo he optado porque cada vez que entre en el script 
+genere 20 archivos, así no tenfo que hacerlo manualmente
+
+
+
+Creamos el archivo crontab1:
+1 * * * * ./aumentalista.sh 
+
+Lanzamos crontab:
+[root@localhost Anfitrion]# crontab crontab1
+
+Ahora lanzaremos otro script que cada minuto reduzca en 10 el numero de 
+lineas del fichero "/tmp/listacores":
+
+script "reducelista":
+#!/bin/bash
+
+head /tmp/listacores -n -10 > /tmp/listacores
+
+Creamos el archibo crontab2:
+1 * * * * ./reducelista 
+
+lanzamos crontab:
+[root@localhost Anfitrion]# crontab crontab2

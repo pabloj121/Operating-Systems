@@ -1,0 +1,84 @@
+Tras ejecutar en mi sistema UML la siguiente orden:
+[root@localhost ~]# ls -lai /dev/  
+total 20
+   18 drwxr-xr-x  5 root root 4096 Oct 29 14:20 .
+    2 dr-xr-xr-x 22 root root 4096 Oct 29 14:05 ..
+   28 crw-------  1 root root 5, 1 Oct 29 14:05 console
+   23 crw-rw-rw-  1 root root 1, 7 Nov  3  2010 full
+14118 -rw-r--r--  1 root root   54 Sep 13  2011 kmsg
+   87 srw-rw-rw-  1 root root    0 Oct 29 14:05 log
+14239 brw-r--r--  1 root root 7, 0 Oct 29 14:14 loop0
+14241 brw-r--r--  1 root root 7, 0 Oct 29 14:20 loop1
+   21 drwxr-xr-x  2 root root 4096 Nov  3  2010 mapper
+   22 crw-rw-rw-  1 root root 1, 3 Nov  3  2010 null
+   29 crw-rw-rw-  1 root root 5, 2 Nov  3  2010 ptmx
+    1 drwxr-xr-x  2 root root    0 Oct 29 14:05 pts
+   25 crw-rw-rw-  1 root root 1, 8 Nov  3  2010 random
+   20 drwxr-xr-x  2 root root 4096 Nov  3  2010 shm
+   32 lrwxrwxrwx  1 root root   15 Nov  3  2010 stderr -> /proc/self/fd/2
+   30 lrwxrwxrwx  1 root root   15 Nov  3  2010 stdin -> /proc/self/fd/0
+   31 lrwxrwxrwx  1 root root   15 Nov  3  2010 stdout -> /proc/self/fd/1
+   27 crw-rw-rw-  1 root root 5, 0 Nov  3  2010 tty
+   67 crw--w----  1 root tty  4, 0 Oct 29 14:20 tty0
+   26 cr--r--r--  1 root root 1, 9 Nov  3  2010 urandom
+   24 crw-rw-rw-  1 root root 1, 5 Nov  3  2010 zero
+
+Según esta informacion:
+-Dispositivos de bloque:
+	/dev/loop0
+	/dev/loop1
+
+-Dispositivos de carácteres:
+	/dev/console
+	/dev/full
+
+Examinamos los archivos olcultos de mi directorio root:
+[root@localhost ~]# ls -a
+.  ..  .bash_history  .bash_logout  .bash_profile  .bashrc  .cshrc  .tcshrc
+
+Los archivos ocultos que tienen relación con el interprete de ordenes por defecto son:
+
+	.bash_history
+	.bash_logout
+	.bash_profile
+
+
+REPETIMOS EL EXPERIMENTO PARA MI MAQUÍNA: (MSI GE 60 2PC - SO Evince)
+
+Ejemplos de archivos especiales de dispositivo de bloques en mi computador:
+
+hulidex@GE60-2PC:~$ ls -lai /dev/sd*
+392 brw-rw---- 1 root disk 8,  0 oct 28 21:31 /dev/sda
+404 brw-rw---- 1 root disk 8,  1 oct 28 21:31 /dev/sda1
+405 brw-rw---- 1 root disk 8,  2 oct 28 21:31 /dev/sda2
+406 brw-rw---- 1 root disk 8,  3 oct 28 21:31 /dev/sda3
+395 brw-rw---- 1 root disk 8, 16 oct 28 21:31 /dev/sdb
+398 brw-rw---- 1 root disk 8, 17 oct 28 21:31 /dev/sdb1
+399 brw-rw---- 1 root disk 8, 18 oct 28 21:31 /dev/sdb2
+400 brw-rw---- 1 root disk 8, 19 oct 28 21:31 /dev/sdb3
+
+Ejemplos de archivos especiales de dispositivo de caracteres en mi computador:
+
+hulidex@GE60-2PC:~$ ls -lai /dev/ttyS*
+ 88 crw-rw---- 1 root dialout 4, 64 oct 28 21:31 /dev/ttyS0
+ 89 crw-rw---- 1 root dialout 4, 65 oct 28 21:31 /dev/ttyS1
+ 98 crw-rw---- 1 root dialout 4, 74 oct 28 21:31 /dev/ttyS10
+ 99 crw-rw---- 1 root dialout 4, 75 oct 28 21:31 /dev/ttyS11
+100 crw-rw---- 1 root dialout 4, 76 oct 28 21:31 /dev/ttyS12
+101 crw-rw---- 1 root dialout 4, 77 oct 28 21:31 /dev/ttyS13
+102 crw-rw---- 1 root dialout 4, 78 oct 28 21:31 /dev/ttyS14
+
+
+Examinamos los archivos olcultos de mi directorio root:
+hulidex@GE60-2PC:~$ sudo ls -a  /root/
+.   .bash_history  .bzr.log  .config  Desktop	.gvfs  .kde    .nano  .oracle_jre_usage  .profile  .synaptic
+..  .bashrc	   .cache    .dbus    .eclipse	.java  .local  .nbi   .p2		 .swt	   workspace
+
+Los archivos ocultos que tienen relación con el interprete de ordenes por defecto son:
+
+	.bash_history
+	.bash_logout
+	.bash_profile
+
+
+Diferencias encontradas en los nombres de archivos con respecto a mi máquina y a la máquina UML:

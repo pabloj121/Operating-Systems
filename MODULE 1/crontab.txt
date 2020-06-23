@@ -1,0 +1,5 @@
+5-59/20 * * * * will run at 5 minutes after, 25 minutes after, and 45 minutes after.
+
+10-59/25 * * * * will run at 10 minutes after and 35 minutes after.
+
+1-59/2 * * * * will run every odd minute.

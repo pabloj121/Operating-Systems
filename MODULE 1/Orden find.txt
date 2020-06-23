@@ -1,0 +1,89 @@
+l comando linux find es uno de los comandos linux más útiles que existen, sin embargo es también uno de los comandos que menos se conocen y que los usuarios nuevos aprecian como “muy complicado” sin embargo, una vez que sabes como funciona te das cuenta que es simple y poderoso cuando tienes 1,800,000 archivos y deseas encontrar “unos” pocos archivos que cumplen ciertos parámetros, este comando “simplifica tu vida” de forma extraordinaria y si eres un Administrador de Sistemas Linux o piensas serlo, este es un comando que debes dominar para que tu sistema linux sea más confortable.
+
+Aquí te explico como funciona el comando find y varios ejemplos prácticos para utilizarlos y aprovechar todo lo que este comando puede hacer.
+
+El comando linux find
+
+Cómo  dice su nombre en inglés este comando sirve para buscar y encontrar archivos o directorios y puedes hacerlo en base a muchas opciones, por ejemplo: puedes buscar archivos por nombre, por nombres que coincidan con ciertas letras o frases, archivos de ciertos usuarios, creados en cierta fecha y un montón de opciones que trataré de mencionar en los siguientes ejemplos. Espero que te sean útiles.
+
+Te Recomiendo:
+“Comandos Linux: find con ejemplos 2da parte”
+
+Lo principal que debes saber es como usar este comando y es que la sinopsis que encuentras con el comando “man find” no es muy calara pues si la vez esto es lo que te dice:
+
+find [-H] [-L] [-P] [-D debugopts] [-Olevel] [path...] [expression]
+He… ok. Así fue como me quedé cuando intenté usar este comando por primera vez y si te ocurre pues no te preocupes esto es lo que significa:
+
+find donde-buscar creterio que-buscar
+Teniendo esto en cuenta ahora puedes comenzar a jugar con find y seguir estos ejemplos para entender como funciona y te hagas un experto en este comando.
+
+Ejemplos básicos
+1. Listar todos los archivos contenidos en el directorio actual y en los sub directorios
+find
+./abc.txt
+ ./folder
+ ./folder/prueba.php
+ ./index.php
+Este comando es equivalente a escribir cualquier a de los siguientes:
+
+find .
+ find . -print
+2. Buscar archivos en una ruta específica
+El siguiente comando realizará una búsqueda de archivos que se encuentren en el subdirectorio “prueba” y listará todos los archivos y directorios que de encuentren dentro del este.
+
+find ./prueba
+ ./prueba
+ ./prueba/abc.txt
+ ./prueba/folder
+ ./prueba/folder/prueba.php
+ ./prueba/index.php
+3. Buscar un archivo por el nombre
+Para buscar un archivo por su nombre puedes utilizar el parámetro -name asi:
+
+find ./prueba -name abc.txt
+ ./prueba/abc.txt
+Al realizar una búsqueda con el comando find también puedes utilizar comodines por ejemplo para buscar todos los archivos con extensión php puedes usarlo asi:
+
+find ./prueba -name *.php
+ ./prueba/folder/prueba.php
+ ./prueba/index.php
+Existe la posibilidad de que quieras encontrar todos los archivos que tengan extensión .php pero algunos están con mayúsculas, para ignorar entre mayúsculas y minúsculas utiliza -iname para ignorar este criterio.
+
+find ./prueba -iname *.PhP
+ ./prueba/folder/prueba.php
+ ./prueba/index.php
+Recuerda que los sub directorios se analizan recursivamente por lo que puedes buscar en todo el sistema de archivos si pones la ruta como / pero debes tener en cuenta que la búsqueda se realizará en todos los directorios dentro del sistema de archivos, incluyendo los sistemas montados por red o en otros dispositivos como DVDs, CDs o USBs, y pueden causar una baja en el desempeño del equipo. Recuerda que siempre puedes cancelar una búsqueda presionando Ctrl+C
+
+4. Invertir el criterio de búsqueda
+Si lo que quieres buscar es todo lo que no cumpla con el criterio de búsqueda puedes utilizar el parámetro -not por ejemplo para buscar todos los archivos que no tienen extensión .php
+
+find ./prueba -not -name *.php
+ ./prueba
+ ./prueba/abc.txt
+ ./prueba/folder
+5. Buscar solo archivos o solo directorios
+Uno de los problemas que todo principiante en linux se encuentra es como listar “solo” los directorios o solo los archivos y para esto el comando find permite hacerlo sin problema
+
+find ./prueba -name abc*
+ ./prueba/abc.txt
+ ./prueba/abc
+para buscar solo archivos utiliza el parámetro -type f
+
+find ./prueba -type f -name abc*
+ ./prueba/abc.txt
+para buscar solo directorios utiliza el parámetro -type d
+
+find ./prueba -type d -name abc*
+ ./prueba/abc
+6. Buscar en múltiples directorios
+Es muy útil poder hacer una búsqueda en varios directorios o rutas a la vez y solo hace falta agregarlas en los parámetros.
+
+find ./prueba ./folder2 -type f -name abc*
+ ./prueba/abc.txt
+ ./folder2/abcdef.txt
+7. Buscar archivos ocultos
+Para realizar la búsqueda de archivos ocultos puedes utilizar el parámetro “.*” como sigue:
+
+find ~ -type f -name ".*"
+Para finalizar
+El comando linux find es realmente útil y un comando que debes dominar para poder gestionar cualquier sistema linux de forma mas sencilla y confortable ya que te permite encontrar archivos de una forma rápida y precisa.

@@ -1,0 +1,36 @@
+Crea un archivo genera-apunte que escriba la lista de hijos del directorio home en un archivo
+de nombre listahome-`date +%Y-%j-%T-$$`, es decir, la yuxtaposición del literal “listahome” y
+el año, día dentro del año, la hora actual y pid (consulte la ayuda de date).
+Lanza la ejecución del archivo genera-apunte un minuto más tarde de la hora actual.
+¿En qué directorio se crea el archivo de salida?
+
+
+
+
+Mi script:
+#!/bin/bash
+
+ls ~ >> listahome-`date +%Y-%j-%T-$$`
+
+echo "archivo generado en `pwd`"
+
+exit
+
+
+comprobamos la fecha actual del sistema:
+[root@localhost Anfitrion]# date
+Thu Nov  3 08:38:11 EDT 2016
+
+Lanzamos el scrip un minuto después de la fecha actual:
+[root@localhost Anfitrion]# at -f ./genera-apunte.sh 8:39
+job 4 at Thu Nov  3 08:39:00 2016
+
+Volvemos a comprobar la hora para verificar que ha transcurrido el tiempo:
+[root@localhost Anfitrion]# date
+Thu Nov  3 08:39:01 EDT 2016
+
+Buscamos en el sistema dónde se ha generado el archivo
+[root@localhost Anfitrion]# find / -name "listahome*" | grep -e 8:39
+/media/Anfitrion/listahome-2016-308-08:39:00-1353
+
+Como vemos el archivo se ha generado en la directorio en el que se encontraba la shell al lanzar la orden "at"

@@ -1,0 +1,2 @@
+ 
+USOS COMANDO FIND = http://www.comoinstalarlinux.com/comandos-linux-find-con-ejemplos/

@@ -1,0 +1,4 @@
+espacio libre del swap : free -mtime?
+
+archivos modificados en un directorio:
+	find -.... (buscar)

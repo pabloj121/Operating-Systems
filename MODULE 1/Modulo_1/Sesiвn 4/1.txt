@@ -1,0 +1,13 @@
+Encuentre los datos asociados a los
+demonios atd8 y crond, en concreto: quién es su padre, qué terminal tienen asociado y cuál es su
+usuario.
+
+Busco los procesos:
+[root@localhost Anfitrion]# ps -ef | grep -e "atd" -e "crond" 
+root      1166     1  0 07:42 ?        00:00:00 crond
+root      1222     1  0 07:50 ?        00:00:00 /usr/sbin/atd
+
+Como se puede apreciar en la salida ambos procesos tiene la terminal asociada
+"?" esto significa que no tienen terminal asociada (lo que es lógico, sabiendo
+que son demonios). En ambos caso el proceso padre es el proceso con PID 1. Ese
+proceso corresponde con init.

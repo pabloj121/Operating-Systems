@@ -1,0 +1,83 @@
+código del script:
+
+inicio=0
+
+while [ $inicio -lt $1 ]
+do
+	sleep 1
+	inicio=`expr $inicio + 1`
+done
+
+echo "Valor $inicio"
+
+exit
+
+En considerado interesante añadir la orden sleep en cada iteración del bucle para que realmente haya una 
+espera entre iteracion e iteracion...
+
+Lanzamos 3 procesos:
+hulidex@GE60-2PC:~$ time ./ejer2_scrip.sh 70000 &
+[1] 22274
+hulidex@GE60-2PC:~$ time ./ejer2_scrip.sh 70000 &
+[2] 24414
+hulidex@GE60-2PC:~$ time ./ejer2_scrip.sh 70000 &
+[3] 26409
+
+Comprobamos su estado:
+
+hulidex@GE60-2PC:~$ ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  2365  4254  0  80   0 - 10487 wait   pts/4    00:00:00 bash
+0 R  1000 18005  2365  0  80   0 - 12005 -      pts/4    00:00:00 ps
+1 S  1000 22274  2365  0  80   0 - 10487 wait   pts/4    00:00:00 bash
+1 S  1000 22276 22274 14  80   0 - 10487 pipe_w pts/4    00:00:01 bash
+1 S  1000 24414  2365  0  80   0 - 10487 wait   pts/4    00:00:00 bash
+1 S  1000 24415 24414 13  80   0 - 10487 pipe_w pts/4    00:00:00 bash
+1 S  1000 26409  2365  0  80   0 - 10487 wait   pts/4    00:00:00 bash
+1 S  1000 26413 26409 14  80   0 - 10487 pipe_w pts/4    00:00:00 bash
+
+Como podemos contemplar nuestros procesos se han creado todos con la prioridad 80
+
+Modificamos la prioridad de dos de ellos:
+hulidex@GE60-2PC:~$ sudo renice -20 22274
+22274 (process ID) old priority 0, new priority -20
+hulidex@GE60-2PC:~$ renice 19 26409
+26409 (process ID) old priority 0, new priority 19
+
+Volvemos a comprobar el estado de los procesos:
+hulidex@GE60-2PC:~$ ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  2365  4254  0  80   0 - 10487 wait   pts/4    00:00:00 bash
+1 S  1000 22274  2365  0  60 -20 - 10487 wait   pts/4    00:00:00 bash
+1 S  1000 22276 22274 15  80   0 - 10487 pipe_w pts/4    00:00:05 bash
+1 S  1000 24414  2365  0  80   0 - 10487 wait   pts/4    00:00:00 bash
+1 S  1000 24415 24414 14  80   0 - 10487 pipe_w pts/4    00:00:04 bash
+0 R  1000 24868  2365  0  80   0 - 12005 -      pts/4    00:00:00 ps
+1 R  1000 24873 24415  0  80   0 - 10487 -      pts/4    00:00:00 bash
+1 R  1000 24879 22276  0  80   0 - 10487 -      pts/4    00:00:00 bash
+1 S  1000 26409  2365  0  99  19 - 10487 wait   pts/4    00:00:00 bash
+1 S  1000 26413 26409 15  80   0 - 10487 pipe_w pts/4    00:00:04 bash
+
+Ahora podemos apreciar  ahora la columna "NI" está modificada con respecto a la gráfica anterior, debido
+a los cambios de prioridad realizados, además hay que notar que el proceso con PID 22274 será el que más 
+prioridad tenga, el proceso con PID 26409 será el que menos prioridad tendrá y los demás tienen la misma prioridad.
+
+Tiempo de ejecución del proceso con PID 22274
+
+real	1m14.471s
+user	0m2.468s
+sys	0m9.044s
+
+Tiempo de ejecución del proceso con PID 24414
+
+real	1m14.483s
+user	0m2.396s
+sys	0m8.828s
+
+Tiempo de ejecución del proceso con PID 26409
+
+real	1m14.571s
+user	0m2.616s
+sys	0m8.708s
+
+

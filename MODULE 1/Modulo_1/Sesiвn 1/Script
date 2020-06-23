@@ -1,0 +1,10 @@
+#!/bin/bash
+#Script para lanzar un kernel de linux sin entorno gráfico, para trabajar sobre el.
+#VARIABLES
+UMLPATH=/fenix/depar/lsi/UML/*.gz
+KERNELV=kernel32-3.0.4
+MEM=1024m
+cp $UMLPATH /tmp
+gunzip -d /tmp/*.gz
+chmod +x /tmp/$KERNELV
+/tmp/$KERNELV ubda=/tmp/Fedora14-x86-root_fs mem=$MEM

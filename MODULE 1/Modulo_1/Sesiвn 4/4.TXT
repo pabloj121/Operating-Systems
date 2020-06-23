@@ -1,0 +1,31 @@
+El proceso nuevo que se lanza al cumplirse el tiempo que se especificó en la orden at....
+20. ¿qué directorio de trabajo tiene inicialmente? ¿hereda el que tenía el proceso que invocó
+a at o bien es el home, directorio inicial por omisión?
+21. ¿qué máscara de creación de archivos umask tiene? ¿es la heredada del padre o la que se
+usa por omisión?
+22. ¿hereda las variables locales del proceso padre?
+Experimenta con la orden at lanzando las órdenes adecuadas para encontrar las respuestas.
+(Puede encontrar información en la ayuda de at)
+
+
+
+
+20. ¿qué directorio de trabajo tiene inicialmente? ¿hereda el que tenía el proceso que invocó
+a at o bien es el home, directorio inicial por omisión?
+
+
+Hereda el directorio que tenía el proceso que la invocó, esto lo he comprobado
+al lanzar el script "genera-apunte" de esta práctica.
+Cuando lanzo la orden find para buscar en el sistem, siempre aparece en la ruta
+donde se encontraba la shell que lanzó at.
+
+21. ¿qué máscara de creación de archivos umask tiene? ¿es la heredada del padre o la que se
+usa por omisión?
+
+La herada del padre. La máscara es 0022
+
+22. ¿hereda las variables locales del proceso padre?
+Experimenta con la orden at lanzando las órdenes adecuadas para encontrar las respuestas.
+
+Hereda todas las varibales locales del proceso padre salvo
+BASH_VERSINFO, DISPLAY, EUID,GROUPS, SHELLOPTS, TERM, UID.

@@ -1,0 +1,97 @@
+1. Comprueba cuántos bloques de datos está usando la partición raíz del sistema UML del
+laboratorio. Ahora obtén la misma información pero expresada en “human readable format”:
+Megabytes o Gigabytes. Para ello consulta en detalle el manual en línea.
+
+
+hulidex@GE60-2PC:~$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+udev             6091136        0   6091136   0% /dev
+tmpfs            1222260     9680   1212580   1% /run
+/dev/sdb3      111073072 10389524  95018320  10% /
+tmpfs            6111284    86884   6024400   2% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+tmpfs            6111284        0   6111284   0% /sys/fs/cgroup
+/dev/sdb1         238938     3547    235391   2% /boot/efi
+/dev/sda1      123723748 21555848  95860060  19% /home
+tmpfs            1222260       60   1222200   1% /run/user/1000
+/dev/sda2       52428796    99132  52329664   1% /media/hulidex/Files
+
+Como se puede ver la partición raíz (expresada por /) en mi computador 
+usa un numero total de 10389524 bloques.
+
+Para expresar esta capacidad en una unidad de medida entendible por un humano:
+
+hulidex@GE60-2PC:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            5,9G     0  5,9G   0% /dev
+tmpfs           1,2G  9,5M  1,2G   1% /run
+/dev/sdb3       106G   10G   91G  10% /
+tmpfs           5,9G   85M  5,8G   2% /dev/shm
+tmpfs           5,0M  4,0K  5,0M   1% /run/lock
+tmpfs           5,9G     0  5,9G   0% /sys/fs/cgroup
+/dev/sdb1       234M  3,5M  230M   2% /boot/efi
+/dev/sda1       118G   21G   92G  19% /home
+tmpfs           1,2G   60K  1,2G   1% /run/user/1000
+/dev/sda2        50G   97M   50G   1% /media/hulidex/Files
+
+
+2. ¿Cuántos inodos se están usando en la partición raíz? ¿Cuántos nuevos archivos se podrían
+crear en esta partición?
+
+hulidex@GE60-2PC:~$ df -i
+Filesystem       Inodes  IUsed    IFree IUse% Mounted on
+udev            1522784    633  1522151    1% /dev
+tmpfs           1527821    865  1526956    1% /run
+/dev/sdb3       7061504 332415  6729089    5% /
+tmpfs           1527821     37  1527784    1% /dev/shm
+tmpfs           1527821      5  1527816    1% /run/lock
+tmpfs           1527821     16  1527805    1% /sys/fs/cgroup
+/dev/sdb1             0      0        0     - /boot/efi
+/dev/sda1       7864320  27889  7836431    1% /home
+tmpfs           1527821     30  1527791    1% /run/user/1000
+/dev/sda2      52395200     36 52395164    1% /media/hulidex/Files
+
+Fijandonos en mi computador, actualmente en la partición raíz se están usando 332415 inodos, se podrían crean tantos archivos como inodos libres es decir 6729089 archivos podrían crearse.
+
+3. ¿Cuál es el tamaño del directorio /etc? ¿Y el del directorio /var? Compara estos tamaños con
+los de los directorios /bin, /usr y /lib. Anota brevemente tus conclusiones.
+
+hulidex@GE60-2PC:~$ sudo du /etc/ -sh 
+14M	/etc/
+
+En mi caso mi directorio /etc tiene 14 Megabytes
+
+
+hulidex@GE60-2PC:~$ sudo du /var -sh
+1,2G	/var
+ 
+El direcotorio /var tiene 1,2 Gygabytes
+
+Comparemos tamaños:
+
+hulidex@GE60-2PC:~$ sudo du /etc /var /bin /usr /lib -sh
+14M	/etc
+1,2G	/var
+13M	/bin
+5,5G	/usr
+879M	/lib
+
+tanto /etc como /bin tienen tamaños similares y además los más pequeños esto se puede deber a que los archivos que contienen no son de gran tamaño, como ya se 
+vio en otras secciones el archivo /etc contiene ficheros de configuranción y el /bin aplicaciones binarias de importancia. 
+
+/usr es mucho mas pesada que las demás porque contiene todas las aplicaciones a las que pueden acceder la mayoría de usuarios del sistema
+
+/var contiene archivos que varían, como registros y bases de datos
+ y /lib contiene todas las librerías del sistema.
+
+
+
+4. Obtén el número de bloques de tamaño 4 KB que utiliza la rama de la estructura jerárquica de
+directorios que comienza en el directorio /etc. En otras palabras, los bloques de tamaño 4 KB del
+subárbol cuya raíz es /etc. ¿Cuál es el tamaño de bloque, por omisión, utilizado en el SA?
+
+hulidex@GE60-2PC:~$ sudo du /etc/ --block-size=4k -s 
+3572	/etc/
+
+Tiene 3572 bloques donde cada uno de esos bloques ocupan 4k. 
+El tamaño por omisión de un bloque es de 1k.

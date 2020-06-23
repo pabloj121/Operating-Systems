@@ -1,0 +1,11 @@
+Para listar todos los paquetes instalados en nuestra distribución:
+
+[root@localhost ~]# yum list installed
+
+Para eliminar un paquete, por ejemplo sudo:
+
+[root@localhost ~]# yum erase sudo
+
+para installar un paquete:
+
+[root@localhost ~]# yum install sudo

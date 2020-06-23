@@ -1,0 +1,25 @@
+/* Ejercicio 2 - Práctica 1 - SO
+
+	Implementa un programa que realice la siguiente funcionalidad. El programa
+acepta como argumento el nombre de un archivo (pathname), lo abre y lo lee en bloques de
+tamaño 80 Bytes, y crea un nuevo archivo de salida, salida.txt, en el que debe aparecer la
+siguiente información:
+*/
+
+#include<sys/types.h>
+#include<sys/stat.h>
+#include<fcntl.h>
+#include<stdio.h>
+#include<errno.h>
+
+int main()
+{
+
+
+
+
+
+
+}
+
+

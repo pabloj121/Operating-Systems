@@ -1,0 +1,3 @@
+TTY es un parametro que contiene el nombre de la terminal a la que está
+asociado cierto proceso, si está con valor ? es que no está asociado a ninguna
+terminal.

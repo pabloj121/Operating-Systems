@@ -1,0 +1,35 @@
+Ordenes usadas para reproducir el ejemplo monstrado
+[root@localhost ~]# touch archivo.txt target_hardLink2.txt
+[root@localhost ~]# ln  archivo.txt hardlink
+[root@localhost ~]# ln -s archivo.txt  softlink
+[root@localhost ~]# ln target_hardLink2.txt hardlink2
+[root@localhost ~]# ls
+archivo.txt  hardlink  hardlink2  softlink  target_hardLink2.txt
+[root@localhost ~]# ls -lai
+total 32
+  311 dr-xr-x---  2 root root 4096 Oct 29 15:58 .
+    2 dr-xr-xr-x 22 root root 4096 Oct 29 14:05 ..
+   58 -rw-------  1 root root   53 Sep 13  2011 .bash_history
+ 3958 -rw-r--r--  1 root root   18 Mar 30  2009 .bash_logout
+ 3959 -rw-r--r--  1 root root  176 Mar 30  2009 .bash_profile
+ 3960 -rw-r--r--  1 root root  176 Sep 22  2004 .bashrc
+ 3961 -rw-r--r--  1 root root  100 Sep 22  2004 .cshrc
+ 3962 -rw-r--r--  1 root root  129 Dec  3  2004 .tcshrc
+14248 -rw-r--r--  2 root root    0 Oct 29 15:54 archivo.txt
+14248 -rw-r--r--  2 root root    0 Oct 29 15:54 hardlink
+14249 -rw-r--r--  2 root root    0 Oct 29 15:54 hardlink2
+14251 lrwxrwxrwx  1 root root   11 Oct 29 15:58 softlink -> archivo.txt
+14249 -rw-r--r--  2 root root    0 Oct 29 15:54 target_hardLink2.txt
+
+
+COmo se puede ver tanto hardlink como archivo.txt comparten el mismo número de inodo 14248. Lo mismo ocurre con target_hardLink2.txt y hardlink2 que comparten el numero de inodo 14249
+
+¿Por qué el contador de enlaces del archivo archivo.txt vale 2 si sobre el existen un enlace
+duro hardLink y un enlace simbólico softLink?
+
+de la misma forma que la mayoria de los archivos tienen como contador de enlaces
+el numero 1, porque existe un enlace duro por defecto en todos los archivos
+que creemos en el SA ese enlace es el enlace duro que tienen sobre el inodo
+asociado a ellos. Por tanto:
+	El archivo archivo.txt tiene 2 enlaces duros, el creado por nosotros y el
+	que tiene por defecto con su inodo asociado.

@@ -1,0 +1,12 @@
+try {
+    var TailTargetTagManager = {
+        "tag": {
+            "_type_": "html",
+            "_content_": [
+                "\x3c!-- Inicio da tag TT de segmencatao --\x3e","\x3cscript id=\"tailtarget\" type=\"text/javascript\"\x3e","    var _ttprofiles = window._ttprofiles || [];","    _ttprofiles.profiles = [];","    _ttprofiles.push(['_setAccount', 'TT-9590-7']);","    _ttprofiles.push(['_enableServices']);","    document.write(\"\x3cscr\" + \"ipt src='//d.tailtarget.com/profiles.js'\x3e\x3c/scr\" + \"ipt\x3e\");","\x3c/script\x3e","\x3c!-- Final da tag TT de segmentacao --\x3e","","\x3cscript type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'\x3e","\x3c/script\x3e","\x3cscript type='text/javascript'\x3e","GS_googleAddAdSenseService(\"ca-pub-4608487008935548\");","GS_googleEnableAllServices();","\x3c/script\x3e","\x3cscript type='text/javascript'\x3e","GA_googleAddSlot(\"ca-pub-4608487008935548\", \"TailTarget\");","\x3c/script\x3e","\x3cscript type='text/javascript'\x3e","GA_googleFetchAds();","GA_googleAddAttr(\"age\", _ttprofiles.age);","GA_googleAddAttr(\"gender\", _ttprofiles.gender);","GA_googleAddAttr(\"cluster\", _ttprofiles.profiles);","GA_googleAddAttr(\"subjects\", _ttprofiles.subjects);","GA_googleAddAttr(\"team\", _ttprofiles.team);","GA_googleAddAttr(\"lists\", _ttprofiles.getLists);","GA_googleAddAttr(\"microseg\", _ttprofiles.getMicrosegments);","GA_googleAddAttr(\"sclass\", _ttprofiles.getSocialClass);","\x3c/script\x3e","\x3cscript type='text/javascript'\x3e","GA_googleFillSlot(\"TailTarget\");","\x3c/script\x3e"
+            ]
+        }
+    };
+    document.write(TailTargetTagManager["tag"]["_content_"].join(" "));
+} catch (e) {
+}

@@ -1,0 +1,33 @@
+
+a) Que contenga el campo “access time” de los archivos del directorio especificado y que esté ordenado por dicho campo.
+
+hulidex@GE60-2PC:~$ ls -u -lt
+total 44
+drwxr-xr-x 2 hulidex hulidex 4096 oct 29 20:05 Templates
+drwxr-xr-x 2 hulidex hulidex 4096 oct 29 20:05 Music
+drwxrwxr-x 3 hulidex hulidex 4096 oct 29 20:05 VirtualBox VMs
+drwxr-xr-x 3 hulidex hulidex 4096 oct 29 20:05 Pictures
+drwxr-xr-x 2 hulidex hulidex 4096 oct 29 20:05 Documents
+drwxrwxr-x 2 hulidex hulidex 4096 oct 29 20:05 NewFolder
+drwxr-xr-x 2 hulidex hulidex 4096 oct 29 20:05 Public
+drwxr-xr-x 3 hulidex hulidex 4096 oct 29 20:05 Videos
+drwx------ 8 hulidex hulidex 4096 oct 29 19:49 Dropbox
+drwxr-xr-x 2 hulidex hulidex 4096 oct 29 19:49 Desktop
+drwxr-xr-x 6 hulidex hulidex 4096 oct 29 17:37 Downloads
+
+
+b) Que contenga el campo “ctime” de los archivos del directorio especificado y que esté ordenado por dicho campo.
+
+hulidex@GE60-2PC:~$ ls -c -lt
+total 44
+drwx------ 8 hulidex hulidex 4096 oct 29 19:49 Dropbox
+drwxr-xr-x 6 hulidex hulidex 4096 oct 27 20:20 Downloads
+drwxr-xr-x 3 hulidex hulidex 4096 oct 17 22:48 Videos
+drwxr-xr-x 3 hulidex hulidex 4096 oct 17 22:48 Pictures
+drwxrwxr-x 2 hulidex hulidex 4096 oct 13 17:55 NewFolder
+drwxrwxr-x 3 hulidex hulidex 4096 oct  9 19:15 VirtualBox VMs
+drwxr-xr-x 2 hulidex hulidex 4096 oct  9 14:49 Desktop
+drwxr-xr-x 2 hulidex hulidex 4096 oct  9 14:34 Documents
+drwxr-xr-x 2 hulidex hulidex 4096 oct  9 14:34 Music
+drwxr-xr-x 2 hulidex hulidex 4096 oct  9 14:34 Public
+drwxr-xr-x 2 hulidex hulidex 4096 oct  9 14:34 Templates

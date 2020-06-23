@@ -1,0 +1,14 @@
+[root@localhost ~]# echo "LABEL=LABEL_ext3                                      /mnt/SA_ext3               ext3    rw,sync 0 0" >> /etc/fstab 
+[root@localhost ~]# echo "LABEL=LABEL_ext4                                      /mnt/LABEL_ext4               ext4    ro 0 0" >> /etc/fstab 
+[root@localhost ~]# cat /etc/fstab                                                               
+#                                                                                                       
+# /etc/fstab                                                                                            
+#                                                                                                                 
+LABEL=ROOT                                      /               auto    noatime         1 1                          
+tmpfs                                           /dev/shm        tmpfs   defaults        0 0                                           
+tmp                                             /tmp            tmpfs   rw,mode=1777,fscontext=system_u:object_r:tmp_t:s0       0 0
+devpts                                          /dev/pts        devpts  gid=5,mode=620  0 0
+sysfs                                           /sys            sysfs   defaults        0 0
+proc                                            /proc           proc    defaults        0 0
+LABEL=LABEL_ext3                                      /mnt/SA_ext3               ext3    rw,sync 0 0
+LABEL=LABEL_ext4                                      /mnt/LABEL_ext4               ext4    ro 0 0

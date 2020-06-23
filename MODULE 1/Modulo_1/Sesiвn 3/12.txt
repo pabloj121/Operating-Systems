@@ -1,0 +1,13 @@
+
+Ordenes usadas:
+[root@localhost ~]# mknod Bloques b 10 5
+[root@localhost ~]# mknod Caracteres c 10 5
+[root@localhost ~]# ls -li
+total 0
+14253 brw-r--r-- 1 root root 10, 5 Oct 29 16:09 Bloques
+14255 crw-r--r-- 1 root root 10, 5 Oct 29 16:10 Caracteres
+14248 -rw-r--r-- 2 root root     0 Oct 29 15:54 archivo.txt
+14248 -rw-r--r-- 2 root root     0 Oct 29 15:54 hardlink
+14249 -rw-r--r-- 2 root root     0 Oct 29 15:54 hardlink2
+14251 lrwxrwxrwx 1 root root    11 Oct 29 15:58 softlink -> archivo.txt
+14249 -rw-r--r-- 2 root root     0 Oct 29 15:54 target_hardLink2.txt
